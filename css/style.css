@@ -350,242 +350,232 @@ button {
 
 
 
-/* services section start */
-
+/* === La Experiencia === */
 .services_section {
-    width: 100%;
-    float: left;
-    padding-bottom: 90px;
+  padding: 80px 0;
+  background-color: #fefefe;
+  text-align: center;
 }
 
-.services_taital {
-    width: 100%;
-    float: left;
-    font-size: 40px;
-    color: #1A1A1A;
-    font-weight: bold;
-    text-align: center;
+.services_title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 16px;
 }
 
+.service_item img {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  display: block;
+}
+
+.services_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px;
+  justify-items: center;
+  align-items: stretch; /* <— opcional */
+}
+
+
+/* Contenedor puro y limpio */
+.service_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none; /* sin fondo */
+  border: none;
+  box-shadow: none;
+}
+
+
+/* efecto elegante al pasar el mouse */
+.service_item img:hover {
+  transform: scale(1.03);
+}
+
+/* Botón sólido azul */
+.service_button {
+  margin-top: 18px;
+  background-color: #7fc6c2;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service_button:hover {
+  background-color: #64aaa6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(127,198,194,0.3);
+}
+
+/* Texto descriptivo ancho completo */
 .services_text {
-    width: 100%;
-    float: left;
+  font-size: 18px;
+  color: #4b4b4b;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  line-height: 1.6;
+  text-align: justify;
+  padding: 0 40px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .service_item img {
+    height: 220px;
+  }
+
+  .services_text {
     font-size: 16px;
-    color: #1A1A1A;
-    margin: 0px;
-}
-
-.services_section_2 {
-    width: 100%;
-    float: left;
-    margin-top: 10px;
-}
-
-.services_img {
-    width: 100%;
-    float: left;
-    text-align: center;
-}
-
-.btn_main {
-    width: 170px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.btn_main a {
-    width: 100%;
-    float: left;
-    font-size: 16px;
-    color: #F5F4ED ;
-    background-color: #7fc6c2 ;
-    text-align: center;
-    padding: 10px 0px;
-    border-radius: 30px;
-    font-weight: bold;
-    margin-top: 40px;
-    text-transform: uppercase;
-}
-
-.btn_main a:hover {
-    color: #F5F4ED ;
-    background-color: #009b74 ;
-}
-
-.btn_main.active a {
-    color: #F5F4ED ;
-    background-color: #009b74 ;
+    padding: 0 20px;
+  }
 }
 
 
-/* services section end */
 
-
-/* about section start */
-
+/* --- SECCIÓN EL MÉTODO --- */
 .about_section {
-    width: 100%;
-    float: left;
-    padding-bottom: 50px;
+  width: 100%;
+  background: #faf8f6;
+  padding: 100px 0 0 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .about_taital_main {
-    width: 100%;
-    padding: 0 20px; /* agrega espacio a izquierda y derecha */
-  text-align: justify; /* asegura que el texto no quede centrado si no quieres */
-}
-
-.padding_right_0 {
-    padding-right: 0px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px;
 }
 
 .about_taital {
-    width: 100%;
-    float: center;
-    font-size: 60px;
-    color: #1A1A1A;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
+  font-size: 60px;
+  color: #1A1A1A;
+  font-weight: 500;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
 }
 
 .about_text {
-    width: 100%;
-    float: left;
-    font-size: 24px;
-    color: #1A1A1A;
-    margin: 10px;
-    padding-top: 10px;
+  font-size: 20px;
+  color: #333;
+  line-height: 1.75;
+  margin-bottom: 60px;
 }
 
-.readmore_bt {
-    width: 170px;
-    float: left;
-    margin-top: 50px;
+/* --- ACORDEÓN --- */
+.ig-method-accordion {
+  max-width: 900px;
+  margin: 0 auto 80px auto;
 }
 
-.readmore_bt a {
-    width: 100%;
-    float: left;
-    font-size: 16px;
-    color: #F5F4ED ;
-    background-color: #009b74 ;
-    text-align: center;
-    padding: 10px 0px;
-    border-radius: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
+.ig-detail {
+  margin-bottom: 15px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid rgba(190, 150, 120, 0.15);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+  transition: all 0.25s ease;
 }
 
-.readmore_bt a:hover {
-    color: #F5F4ED ;
-    background-color: #7fc6c2 ;
+.ig-detail:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
 }
 
+.ig-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #2a2a2a;
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+  border-radius: 14px;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(250,248,246,1) 100%);
+  position: relative;
+}
+
+.ig-sub {
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #8a6b57;
+  margin-left: 10px;
+}
+
+.ig-summary::after {
+  content: "▾";
+  font-size: 1rem;
+  color: #a7825a;
+  transition: transform 0.3s ease;
+}
+
+.ig-detail[open] .ig-summary::after {
+  transform: rotate(-180deg);
+}
+
+.ig-detail[open] .ig-summary {
+  background: rgba(248,244,240,0.6);
+}
+
+.ig-content {
+  padding: 1.2rem 1.6rem 1.4rem 1.6rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  border-top: 1px solid rgba(190,150,120,0.1);
+}
+
+/* --- IMAGEN FULL WIDTH --- */
 .container-fluid {
-  max-width: 100% !important;
-  padding: 0 !important;
-  margin: 0 !important;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .container-fluid img {
   width: 100%;
   height: auto;
   display: block;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
 }
 
-/* contact section end */
-
-.ig-method-accordion {
-  max-width: 90%;
-  margin: 30px auto 0 auto; /* 30px de separación superior */
-}
-
-/* Restauramos el look “tarjeta” pero compacto */
-.ig-detail {
-  margin-bottom: 10px; /* separación entre bloques */
-  border-radius: 12px;
-  overflow: hidden;
-  background: linear-gradient(180deg, rgba(245,241,238,0.7), rgba(245,241,238,0.5));
-  border: 1px solid rgba(196,160,139,0.18);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04); /* sutil profundidad */
-  transition: box-shadow 0.2s ease;
-}
-
-.ig-detail:hover {
-  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
-}
-
-.ig-summary {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* textos alineados al inicio */
-  gap: 6px; /* espacio natural entre los textos */
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 1rem;
-  color: #2a2a2a;
-  background: transparent;
-  transition: background 0.2s ease, color 0.2s ease;
-  padding: 0.85rem 1rem;
-  position: relative;
-}
-
-/* subtexto junto al principal */
-.ig-sub {
-  font-weight: 500;
-  font-size: 0.9rem;
-  color: #6b4e3a;
-  margin-left: 4px;
-}
-
-/* Contenido interno */
-.ig-content {
-  padding: 0.75rem 1rem 0.9rem 1rem;
-  font-size: 0.95rem;
-  line-height: 1.55;
-  color: #333;
-  border-top: 1px solid rgba(196,160,139,0.1);
-}
-
-/* flecha al extremo derecho */
-.ig-summary::after {
-  content: "▾";
-  font-size: 0.9rem;
-  color: #8a6b57;
-  position: absolute;
-  right: 1rem; /* fija la flecha al borde derecho */
-  transition: transform 0.25s ease;
-}
-
-/* cuando se abre el bloque */
-.ig-detail[open] .ig-summary::after {
-  transform: rotate(-180deg);
-}
-
-/* Estado abierto */
-.ig-detail[open] .ig-summary {
-  background: rgba(196,160,139,0.05);
-}
-
-/* Responsive */
-@media (max-width: 720px) {
-  .ig-method-accordion {
-    max-width: 100%;
-    padding: 0 20px;
-    margin-top: 20px;
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .about_taital {
+    font-size: 42px;
+  }
+  .about_text {
+    font-size: 18px;
   }
   .ig-summary {
-    padding: 0.8rem;
-    font-size: 0.95rem;
+    flex-direction: column;
+    align-items: flex-start;
   }
   .ig-sub {
-    display: block;
-    margin-top: 3px;
-    font-size: 0.85rem;
-    color: #7a5742;
+    margin-left: 0;
+    margin-top: 6px;
   }
 }
+
+
 
 
 /* blog section start */
