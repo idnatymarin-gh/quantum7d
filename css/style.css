@@ -509,6 +509,7 @@ button {
   color: #333;
   line-height: 1.75;
   margin-bottom: 60px;
+  text-align: justify;
 }
 
 /* --- ACORDEÓN --- */
@@ -728,6 +729,42 @@ button {
   background: #fdfdfd;
 }
 
+/* 🔹 Encabezado centrado total */
+.exclusive_header_full {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente */
+  justify-content: center; /* centra verticalmente si lo necesitas */
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.exclusive_title {
+  color: #272f38;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+
+.exclusive_subtitle {
+  color: #ce8e00;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Contenedor */
+.exclusive_container {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Grid dos columnas */
 .exclusive_grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -735,23 +772,7 @@ button {
   align-items: start;
 }
 
-.exclusive_title {
-  color: #272f38;
-  font-size: 38px;
-  font-weight: 700;
-  text-align: center;
-  grid-column: span 2;
-  margin-bottom: 8px;
-}
-
-.exclusive_subtitle {
-  color: #ce8e00;
-  font-size: 18px;
-  margin-bottom: 32px;
-  font-weight: 500;
-  text-align: center;
-}
-
+/* Titulares */
 .exclusive_col_title {
   color: #272f38;
   font-size: 22px;
@@ -759,7 +780,7 @@ button {
   font-weight: 600;
 }
 
-/* Botones de filtros */
+/* Botones de filtro */
 .exclusive_filters {
   display: flex;
   gap: 12px;
@@ -783,44 +804,46 @@ button {
   color: #fff;
 }
 
-/* Descripción dinámica */
+/* Tarjeta de información */
 .class_info {
   border: 1px solid #ddd;
   border-radius: 14px;
-  padding: 24px;
+  padding: 22px;
   background: #fff;
-  text-align: left;
-  margin-bottom: 20px;
+  transition: all 0.3s ease;
 }
 
-.class_info h4 {
+.class_title {
   color: #272f38;
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-weight: 600;
 }
 
 .class_desc {
-  color: #4b4b4b;
-  margin-bottom: 12px;
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .class_objective {
   color: #272f38;
-  margin-bottom: 10px;
+  font-size: 15px;
+  margin-bottom: 14px;
 }
 
 .class_schedule li {
   color: #7fc6c2;
-  list-style: none;
-  margin-bottom: 6px;
+  font-size: 15px;
+  margin-bottom: 4px;
 }
 
 .class_schedule span {
-  color: #009b74;
+  color: #272f38;
   font-weight: 600;
 }
 
-/* Texto final */
+/* Leyenda inferior */
 .exclusive_legend {
   margin-top: 24px;
   font-size: 14px;
@@ -873,6 +896,7 @@ button {
   margin-bottom: 12px;
 }
 
+/* Botón general */
 .cta_container {
   text-align: center;
   margin-top: 30px;
@@ -901,11 +925,7 @@ button {
   .exclusive_grid {
     grid-template-columns: 1fr;
   }
-  .exclusive_title {
-    grid-column: 1;
-  }
 }
-
 /* contact section start */
 
 .contact_section {
