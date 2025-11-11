@@ -445,6 +445,40 @@ button {
   }
 }
 
+/* Descripción oculta por defecto */
+.service_description {
+  max-width: 360px;
+  margin-top: 14px;
+  background: #f8f8f8;
+  border-radius: 14px;
+  padding: 16px 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+  display: none;
+  text-align: justify;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Cuando se activa */
+.service_description.show {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+/* CTA */
+.cta_text {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #5fa9a3;
+  text-align: center;
+}
+
+/* Efecto suave al aparecer */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 
 /* --- SECCIÓN EL MÉTODO --- */
