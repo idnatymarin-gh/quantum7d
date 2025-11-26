@@ -387,34 +387,38 @@
     <div class="exclusive_grid">
 
       <!-- ===== COLUMNA IZQUIERDA ===== -->
-      <div class="exclusive_left">
-        <h3 class="exclusive_col_title">Explore Nuestras Master Classes Premier de la Semana</h3>
+<div class="exclusive_left">
+  <h3 class="exclusive_col_title">Explore Nuestras Master Classes Premier de la Semana</h3>
 
-        <!-- Botones de selección -->
-        <div class="exclusive_filters">
-          <button class="filter_button active" data-class="recuperacion">Recuperación Celular</button>
-          <button class="filter_button" data-class="fuerza">Fuerza y Estructura</button>
-          <button class="filter_button" data-class="conciencia">Conciencia e Integración</button>
-        </div>
+  <!-- Botones de selección -->
+  <div class="exclusive_filters">
+    <button class="filter_button active" data-class="fuerza">Fuerza y Estructura</button>
+    <button class="filter_button" data-class="longevidad">Longevidad y Bienestar Integral</button>
+    <button class="filter_button" data-class="neuro">Neuro-Regulación y Enfoque</button>
+    <button class="filter_button" data-class="metabolismo">Metabolismo y Desintoxicación</button>
+    <button class="filter_button" data-class="recuperacion">Recuperación Celular</button>
+    <button class="filter_button" data-class="conciencia">Conciencia e Integración</button>
+  </div>
 
-        <!-- Contenido dinámico -->
-        <div id="classInfo" class="class_info">
-          <h4 class="class_title">Recuperación Celular</h4>
-          <p class="class_desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo elit non justo consequat, vitae consequat neque blandit.
-          </p>
-          <p class="class_objective"><strong>Objetivo:</strong> Optimizar los procesos de regeneración y descanso del cuerpo mediante técnicas somáticas.</p>
-          <ul class="class_schedule">
-            <li><span>Lunes</span> — 6:30 a.m.</li>
-            <li><span>Miércoles</span> — 7:30 a.m.</li>
-            <li><span>Viernes</span> — 8:00 a.m.</li>
-          </ul>
-        </div>
+  <!-- Contenido dinámico -->
+  <div id="classInfo" class="class_info">
+    <h4 class="class_title">Fuerza y Estructura</h4>
+    <p class="class_desc">
+      Sesión enfocada en el desarrollo estructural, estabilidad y fuerza funcional.
+    </p>
+    <p class="class_objective"><strong>Objetivo:</strong> Construir fortaleza corporal segura, consciente y adaptada a los niveles del usuario.</p>
+    <ul class="class_schedule">
+      <li><span>Lunes</span> — 7:00 a.m.</li>
+      <li><span>Miércoles</span> — 9:00 a.m.</li>
+      <li><span>Viernes</span> — 8:00 a.m.</li>
+    </ul>
+  </div>
 
-        <p class="exclusive_legend">
-          Para reservar tu posición, adquiere tu paquete y selecciona tu clase y horario en nuestro portal de reservas.
-        </p>
-      </div>
+  <p class="exclusive_legend">
+    Para reservar tu posición, adquiere tu paquete y selecciona tu clase y horario en nuestro portal de reservas.
+  </p>
+</div>
+
 
       <!-- ===== COLUMNA DERECHA ===== -->
       <div class="exclusive_right">
@@ -465,37 +469,69 @@
 <!-- === SCRIPT === -->
 <script>
 const classData = {
-  recuperacion: {
-    title: "Recuperación Celular",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo elit non justo consequat, vitae consequat neque blandit.",
-    objective: "Optimizar los procesos de regeneración y descanso del cuerpo mediante técnicas somáticas.",
+  fuerza: {
+    title: "Fuerza y Estructura",
+    desc: "Entrenamiento orientado al desarrollo estructural, estabilidad y fuerza funcional.",
+    objective: "Construir fortaleza corporal segura, consciente y adaptada al nivel del usuario.",
     schedule: [
-      { day: "Lunes", hour: "6:30 a.m." },
-      { day: "Miércoles", hour: "7:30 a.m." },
+      { day: "Lunes", hour: "7:00 a.m." },
+      { day: "Miércoles", hour: "9:00 a.m." },
       { day: "Viernes", hour: "8:00 a.m." }
     ]
   },
-  fuerza: {
-    title: "Fuerza y Estructura",
-    desc: "Entrenamiento de resistencia y control postural para activar la fuerza funcional del cuerpo.",
-    objective: "Mejorar la estabilidad y el rendimiento físico a través de movimientos conscientes.",
+
+  longevidad: {
+    title: "Longevidad y Bienestar Integral",
+    desc: "Sesión diseñada para potenciar la vitalidad, la salud articular y el bienestar integral a largo plazo.",
+    objective: "Promover movilidad, control y bienestar mediante estímulos funcionales seguros.",
     schedule: [
-      { day: "Martes", hour: "6:45 a.m." },
-      { day: "Jueves", hour: "7:00 a.m." },
-      { day: "Sábado", hour: "9:00 a.m." }
+      { day: "Lunes", hour: "8:00 a.m." },
+      { day: "Jueves", hour: "9:00 a.m." }
     ]
   },
+
+  neuro: {
+    title: "Neuro-Regulación y Enfoque",
+    desc: "Entrenamiento que regula sistemas nerviosos y potencia claridad mental y enfoque.",
+    objective: "Sincronizar funciones corporales y mentales para mejorar el rendimiento diario.",
+    schedule: [
+      { day: "Lunes", hour: "9:00 a.m." },
+      { day: "Martes", hour: "8:00 a.m." },
+      { day: "Viernes", hour: "7:00 a.m." }
+    ]
+  },
+
+  metabolismo: {
+    title: "Metabolismo y Desintoxicación",
+    desc: "Sesión enfocada en activar procesos metabólicos y mejorar la depuración interna.",
+    objective: "Incrementar energía, eficiencia metabólica y salud celular.",
+    schedule: [
+      { day: "Martes", hour: "7:00 a.m." },
+      { day: "Jueves", hour: "8:00 a.m." }
+    ]
+  },
+
+  recuperacion: {
+    title: "Recuperación Celular",
+    desc: "Metodología somática orientada a restaurar tejidos, liberar tensiones y optimizar la regeneración interna.",
+    objective: "Favorecer la recuperación fisiológica y el equilibrio general del cuerpo.",
+    schedule: [
+      { day: "Martes", hour: "9:00 a.m." },
+      { day: "Jueves", hour: "7:00 a.m." }
+    ]
+  },
+
   conciencia: {
     title: "Conciencia e Integración",
-    desc: "Sesión enfocada en la conexión cuerpo-mente, respiración y fluidez corporal.",
-    objective: "Promover la integración neuromuscular y el equilibrio emocional.",
+    desc: "Entrenamiento centrado en la respiración, el control corporal y la conexión mente-cuerpo.",
+    objective: "Mejorar la percepción interna y la integración de los sistemas corporales.",
     schedule: [
-      { day: "Miércoles", hour: "6:00 a.m." },
-      { day: "Viernes", hour: "7:15 a.m." },
-      { day: "Domingo", hour: "8:30 a.m." }
+      { day: "Miércoles", hour: "7:00 a.m." },
+      { day: "Viernes", hour: "9:00 a.m." }
     ]
   }
 };
+
 
 const buttons = document.querySelectorAll(".filter_button");
 const classInfo = document.getElementById("classInfo");
