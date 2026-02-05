@@ -403,22 +403,118 @@
         </div>
 
         <!-- INFO DINÁMICA -->
-        <div id="classInfo" class="class_info">
-          <h4 class="class_title">Somatic Training</h4>
-          <p class="class_desc">
-            Línea enfocada en el control del movimiento, la alineación, la movilidad profunda y la integración mente-cuerpo.
-          </p>
+        <div id="classInfo" class="class_info line-mandarina">
 
-          <p class="class_objective">
-            <strong>Master Classes:</strong>
-          </p>
+        <!-- línea visual -->
+        <span class="line_indicator"></span>
 
-          <ul class="class_schedule">
-            <li>With Springs</li>
-            <li>Functional Balance Boost</li>
-            <li>Flow & Motion</li>
-          </ul>
+        <h4 class="class_title">Master Class</h4>
+
+        <p class="class_desc">
+        Nuestras Líneas Foco responden a una necesidad específica del cuerpo humano, permitiendo diseñar experiencias de
+movimiento que respetan los principios de adaptación, carga, recuperación y longevidad funcional.
+
+        </p>
+
+        <ul class="class_schedule tooltip_list">
+        <!-- Se llena por JS -->
+        </ul>
+          <script>
+const classData = {
+  mandarina: {
+    colorClass: "line-mandarina",
+    title: "Somatic Training",
+    desc: "Movimiento consciente, alineación, propiocepción y movilidad profunda para sostener el bienestar a largo plazo.",
+    classes: [
+      {
+        name: "With Springs",
+        tip: "Evolución segura del Pilates enfocada en control, precisión y alineación corporal."
+      },
+      {
+        name: "Functional Balance Boost",
+        tip: "Entrenamiento de equilibrio dinámico, coordinación y conciencia corporal mediante movimientos fluidos."
+      },
+      {
+        name: "Flow & Motion",
+        tip: "Movilidad y estiramientos profundos para flexibilidad y conexión mente-cuerpo."
+      }
+    ]
+  },
+
+  azul: {
+    colorClass: "line-azul",
+    title: "Fiber Nexus Dynamics",
+    desc: "Desarrollo de fuerza absoluta, estabilidad central y control estructural del cuerpo.",
+    classes: [
+      {
+        name: "Strength SYSTEM",
+        tip: "Trabajo de fuerza absoluta con cargas altas y control mecánico preciso."
+      },
+      {
+        name: "Strength Core",
+        tip: "Fortalecimiento profundo del núcleo para estabilidad y postura funcional."
+      },
+      {
+        name: "Suspension Strength 2.0",
+        tip: "Entrenamiento en suspensión que desafía fuerza, coordinación y control corporal."
+      }
+    ]
+  },
+
+  menta: {
+    colorClass: "line-menta",
+    title: "Neuro Boost Intervals Training",
+    desc: "Estimulación metabólica, endocrina y cardiovascular para un cuerpo adaptable y eficiente.",
+    classes: [
+      {
+        name: "HIIT Resilience Fusion",
+        tip: "Alta intensidad funcional para resiliencia metabólica y neuromuscular."
+      },
+      {
+        name: "The Concurrent Edge",
+        tip: "Fuerza y cardio integrados para optimizar rendimiento sistémico."
+      },
+      {
+        name: "Multi-Domain Mastery",
+        tip: "Desarrollo equilibrado de fuerza, resistencia, movilidad y coordinación."
+      },
+      {
+        name: "Endocrine Ride Cycle",
+        tip: "Ciclismo indoor enfocado en estimulación hormonal y metabólica."
+      },
+      {
+        name: "Endocrine Method — Bounce & Flow",
+        tip: "Bajo impacto con rebote y boxing para activación endócrina sin estrés articular."
+      }
+    ]
+  }
+};
+
+const buttons = document.querySelectorAll(".filter_button");
+const classInfo = document.getElementById("classInfo");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    buttons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const selected = classData[btn.dataset.class];
+    if (!selected) return;
+
+    classInfo.className = `class_info ${selected.colorClass}`;
+    classInfo.querySelector(".class_title").textContent = selected.title;
+    classInfo.querySelector(".class_desc").textContent = selected.desc;
+
+    classInfo.querySelector(".class_schedule").innerHTML =
+      selected.classes
+        .map(c => `<li data-tooltip="${c.tip}">${c.name}</li>`)
+        .join("");
+  });
+});
+</script>
+
         </div>
+
 
         <p class="exclusive_legend">
           Las Master Classes se programan según evaluación previa y disponibilidad del ecosistema.
@@ -465,62 +561,6 @@
   </div>
 
 </section>
-
-<!-- === SCRIPT === -->
-<script>
-const classData = {
-  mandarina: {
-    title: "Somatic Training",
-    desc: "Movimiento consciente, alineación, propiocepción y movilidad profunda para sostener el bienestar a largo plazo.",
-    classes: [
-      "With Springs",
-      "Functional Balance Boost",
-      "Flow & Motion"
-    ]
-  },
-
-  azul: {
-    title: "Fiber Nexus Dynamics",
-    desc: "Desarrollo de fuerza absoluta, estabilidad central y control estructural del cuerpo.",
-    classes: [
-      "Strength SYSTEM",
-      "Strength Core",
-      "Suspension Strength 2.0"
-    ]
-  },
-
-  menta: {
-    title: "Neuro Boost Intervals Training",
-    desc: "Estimulación metabólica, endocrina y cardiovascular para un cuerpo adaptable y eficiente.",
-    classes: [
-      "HIIT Resilience Fusion",
-      "The Concurrent Edge",
-      "Multi-Domain Mastery",
-      "Endocrine Ride Cycle",
-      "Endocrine Method — Bounce & Flow"
-    ]
-  }
-};
-
-const buttons = document.querySelectorAll(".filter_button");
-const classInfo = document.getElementById("classInfo");
-
-buttons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    buttons.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-
-    const selected = classData[btn.dataset.class];
-    if (selected) {
-      classInfo.querySelector(".class_title").textContent = selected.title;
-      classInfo.querySelector(".class_desc").textContent = selected.desc;
-      classInfo.querySelector(".class_schedule").innerHTML =
-        selected.classes.map(c => `<li>${c}</li>`).join("");
-    }
-  });
-});
-</script>
-
 
 
    <!-- client section end -->
