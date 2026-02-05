@@ -278,7 +278,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.45);
   z-index: 1;
 }
 
@@ -804,44 +804,81 @@ button {
   color: #fff;
 }
 
-/* Tarjeta de información */
+/* ===== LINEA VISUAL ===== */
+
 .class_info {
-  border: 1px solid #ddd;
-  border-radius: 14px;
-  padding: 22px;
-  background: #fff;
-  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 26px;
 }
 
-.class_title {
-  color: #272f38;
-  font-size: 20px;
-  margin-bottom: 8px;
-  font-weight: 600;
+.line_indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  border-radius: 6px;
+  background: #f4a261; /* default mandarina */
 }
 
-.class_desc {
-  color: #555;
-  font-size: 16px;
-  margin-bottom: 10px;
+/* Colores por línea */
+
+.line-mandarina .line_indicator {
+  background: #f4a261;
 }
 
-.class_objective {
-  color: #272f38;
+.line-azul .line_indicator {
+  background: #1f3a5f;
+}
+
+.line-menta .line_indicator {
+  background: #5fb3a2;
+}
+
+/* ===== LISTA DE MASTER CLASSES ===== */
+
+.tooltip_list {
+  list-style: none;
+  padding: 0;
+  margin-top: 22px;
+}
+
+.tooltip_list li {
+  position: relative;
   font-size: 15px;
-  margin-bottom: 14px;
+  padding: 10px 0;
+  color: #1f3333;
+  cursor: default;
+  border-bottom: 1px solid #e5ecea;
 }
 
-.class_schedule li {
-  color: #ce8e00;
-  font-size: 15px;
-  margin-bottom: 4px;
+/* TOOLTIP */
+
+.tooltip_list li::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 0;
+  bottom: 130%;
+  width: 280px;
+  padding: 14px 16px;
+  background: #1f3333;
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 1.6;
+  border-radius: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: all 0.25s ease;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+  z-index: 10;
 }
 
-.class_schedule span {
-  color: #272f38;
-  font-weight: 600;
+.tooltip_list li:hover::after {
+  opacity: 1;
+  transform: translateY(0);
 }
+
 
 /* Leyenda inferior */
 .exclusive_legend {
