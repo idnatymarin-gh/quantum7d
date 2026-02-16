@@ -1070,27 +1070,29 @@ button {
 }
 
 
-
-
 /* Responsive */
 @media (max-width: 768px) {
+
   .contact_grid {
     grid-template-columns: 1fr;
   }
 
   .contact_map iframe {
-    height: 300px;
+    height: 150px;
   }
 
-  @media (max-width: 768px) {
+  .contact_info {
+    padding: 40px 20px; /* 🔥 antes era 60px */
+  }
+
   .whatsapp_btn {
     width: 100%;
     max-width: 320px;
     text-align: center;
   }
-}
 
 }
+
 
 /* footer section start */
 
