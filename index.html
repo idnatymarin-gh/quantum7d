@@ -80,8 +80,8 @@
   <nav class="top_nav">
     <ul>
       <li><a href="#el-metodo">El Método</a></li>
-      <li><a href="#la-experiencia">La Experiencia</a></li>
       <li><a href="#masterclasses">Master Class</a></li>
+      <li><a href="#la-experiencia">La Experiencia</a></li>
       <li><a href="#PQRs">Reglamento</a></li>
       <li><a href="#contacto">Información</a></li>
     </ul>
@@ -150,121 +150,7 @@
       <!-- header section end -->
 
 
-<section class="experiencia" id="la-experiencia">
-  <div class="container">
-    <h1 class="exp_titulo">La Experiencia</h1>
-    <p class="exp_texto">
-      Transformación que viene de adentro hacia afuera, tanto a nivel físico (piel radiante, desintoxicación) como a nivel mental (paz, energía).
-    </p>
-
-    <div class="exp_grid">
-
-      <!-- Bloque 1 -->
-      <div class="exp_bloque">
-        <img src="images/img-1.png" alt="Recuperación Celular (Infrarrojo)" class="exp_img">
-        <button class="exp_boton">
-          Recuperación Celular (Infrarrojo)
-          <span class="flecha"></span>
-        </button>
-        <div class="exp_contenido">
-          <p>El Lujo de la Regeneración: Activa las Proteínas de Choque Térmico (HSPs). Esto no es solo recuperarse, es acelerar la reparación a nivel molecular. Deje el agotamiento atrás y asegure su vitalidad constante, lista para el próximo desafío.</p>
-        </div>
-      </div>
-
-      <!-- Bloque 2 -->
-      <div class="exp_bloque">
-        <img src="images/img-2.png" alt="Fuerza y Estructura (Física)" class="exp_img">
-        <button class="exp_boton">
-          Fuerza y Estructura (Física)
-          <span class="flecha"></span>
-        </button>
-        <div class="exp_contenido">
-          <p>Posea una Estructura Inquebrantable: La verdadera fortaleza se construye desde la Alineación Postural. Obtenga la Resistencia y el Tono que su estilo de vida exige, garantizando la durabilidad y la elegancia en cada movimiento. Su cuerpo, su activo más valioso.</p>
-        </div>
-      </div>
-
-      <!-- Bloque 3 -->
-      <div class="exp_bloque">
-        <img src="images/img-3.png" alt="Neuro-Regulación y Enfoque" class="exp_img">
-        <button class="exp_boton">
-          Neuro-Regulación y Enfoque
-          <span class="flecha"></span>
-        </button>
-        <div class="exp_contenido">
-          <p>El Control es el Nuevo Lujo: Reduzca el cortisol y equilibre su Sistema Nervioso Parasimpático en el ambiente más sereno. Obtenga una claridad mental y un enfoque que trasciende la sala de yoga. La inversión más directa en su capacidad de decisión.</p>
-        </div>
-      </div>
-
-      <!-- Bloque 4 -->
-      <div class="exp_bloque">
-        <img src="images/img-4.png" alt="Conciencia e Integración (Mente)" class="exp_img">
-        <button class="exp_boton">
-          Conciencia e Integración (Mente)
-          <span class="flecha"></span>
-        </button>
-        <div class="exp_contenido">
-          <p>La Fusión Interior: Conecte con la Unificación Interior que los líderes buscan. En Quantum 7D, la conciencia no es un ejercicio, es el poder para alinear sus metas y sus acciones. Su centro, su ventaja innegable.</p>
-        </div>
-      </div>
-
-      <!-- Bloque 5 -->
-      <div class="exp_bloque">
-        <img src="images/img-5.png" alt="Metabolismo y Desintoxicación" class="exp_img">
-        <button class="exp_boton">
-          Metabolismo y Desintoxicación
-          <span class="flecha"></span>
-        </button>
-        <div class="exp_contenido">
-          <p>Optimización Sin Esfuerzo Extremo: Nuestro método asegura la Regulación Hormonal y la quema de grasa eficiente. El calor infrarrojo impulsa la Eliminación de Toxinas a nivel celular, garantizando una desintoxicación y una claridad que se ven y se sienten.</p>
-        </div>
-      </div>
-
-      <!-- Bloque 6 -->
-      <div class="exp_bloque">
-        <img src="images/img-6.png" alt="Longevidad y Bienestar Integral" class="exp_img">
-        <button class="exp_boton">
-          Longevidad y Bienestar Integral
-          <span class="flecha"></span>
-        </button>
-        <div class="exp_contenido">
-          <p>La Promesa Premier: Su membresía es la garantía de que está optimizando los 7 Factores de la Longevidad. Elija Quantum 7D para una vida de vitalidad sin límites. Este es el único sistema diseñado para proteger y elevar su futuro bienestar.</p>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="exp_cta">
-      <h1><em>La oportunidad de asegurar el estatus Premier es temporal.<br>
-      Asegure su lugar exclusivo entre los primeros 50 Miembros.</em></h1>
-    </div>
-  </div>
-</section>
-
-<script>
-  document.querySelectorAll('.exp_boton').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const bloque = btn.closest('.exp_bloque');
-      const contenido = bloque.querySelector('.exp_contenido');
-      const flecha = btn.querySelector('.flecha');
-
-      // Cerrar todos los demás
-      document.querySelectorAll('.exp_contenido.mostrar').forEach(abierto => {
-        if (abierto !== contenido) {
-          abierto.classList.remove('mostrar');
-          abierto.previousElementSibling.querySelector('.flecha')?.classList.remove('rotar');
-        }
-      });
-
-      // Alternar este
-      contenido.classList.toggle('mostrar');
-      flecha.classList.toggle('rotar');
-    });
-  });
-</script>
-
-
-   
-   <!-- client section start -->
+   <!-- master class -->
 
 <!-- EXPERIENCIA DE MASTER CLASSES -->
 <section class="exclusive_section" id="masterclasses">
@@ -439,7 +325,126 @@ updateClass("mandarina");
 
 </section>
 
-   <!-- client section end -->
+   <!-- master class -->
+
+
+
+<section class="experiencia" id="la-experiencia">
+  <div class="container">
+    <h1 class="exp_titulo">La Experiencia</h1>
+    <p class="exp_texto">
+      Transformación que viene de adentro hacia afuera, tanto a nivel físico (piel radiante, desintoxicación) como a nivel mental (paz, energía).
+    </p>
+
+    <div class="exp_grid">
+
+      <!-- Bloque 1 -->
+      <div class="exp_bloque">
+        <img src="images/img-1.png" alt="Recuperación Celular (Infrarrojo)" class="exp_img">
+        <button class="exp_boton">
+          Recuperación Celular (Infrarrojo)
+          <span class="flecha"></span>
+        </button>
+        <div class="exp_contenido">
+          <p>El Lujo de la Regeneración: Activa las Proteínas de Choque Térmico (HSPs). Esto no es solo recuperarse, es acelerar la reparación a nivel molecular. Deje el agotamiento atrás y asegure su vitalidad constante, lista para el próximo desafío.</p>
+        </div>
+      </div>
+
+      <!-- Bloque 2 -->
+      <div class="exp_bloque">
+        <img src="images/img-2.png" alt="Fuerza y Estructura (Física)" class="exp_img">
+        <button class="exp_boton">
+          Fuerza y Estructura (Física)
+          <span class="flecha"></span>
+        </button>
+        <div class="exp_contenido">
+          <p>Posea una Estructura Inquebrantable: La verdadera fortaleza se construye desde la Alineación Postural. Obtenga la Resistencia y el Tono que su estilo de vida exige, garantizando la durabilidad y la elegancia en cada movimiento. Su cuerpo, su activo más valioso.</p>
+        </div>
+      </div>
+
+      <!-- Bloque 3 -->
+      <div class="exp_bloque">
+        <img src="images/img-3.png" alt="Neuro-Regulación y Enfoque" class="exp_img">
+        <button class="exp_boton">
+          Neuro-Regulación y Enfoque
+          <span class="flecha"></span>
+        </button>
+        <div class="exp_contenido">
+          <p>El Control es el Nuevo Lujo: Reduzca el cortisol y equilibre su Sistema Nervioso Parasimpático en el ambiente más sereno. Obtenga una claridad mental y un enfoque que trasciende la sala de yoga. La inversión más directa en su capacidad de decisión.</p>
+        </div>
+      </div>
+
+      <!-- Bloque 4 -->
+      <div class="exp_bloque">
+        <img src="images/img-4.png" alt="Conciencia e Integración (Mente)" class="exp_img">
+        <button class="exp_boton">
+          Conciencia e Integración (Mente)
+          <span class="flecha"></span>
+        </button>
+        <div class="exp_contenido">
+          <p>La Fusión Interior: Conecte con la Unificación Interior que los líderes buscan. En Quantum 7D, la conciencia no es un ejercicio, es el poder para alinear sus metas y sus acciones. Su centro, su ventaja innegable.</p>
+        </div>
+      </div>
+
+      <!-- Bloque 5 -->
+      <div class="exp_bloque">
+        <img src="images/img-5.png" alt="Metabolismo y Desintoxicación" class="exp_img">
+        <button class="exp_boton">
+          Metabolismo y Desintoxicación
+          <span class="flecha"></span>
+        </button>
+        <div class="exp_contenido">
+          <p>Optimización Sin Esfuerzo Extremo: Nuestro método asegura la Regulación Hormonal y la quema de grasa eficiente. El calor infrarrojo impulsa la Eliminación de Toxinas a nivel celular, garantizando una desintoxicación y una claridad que se ven y se sienten.</p>
+        </div>
+      </div>
+
+      <!-- Bloque 6 -->
+      <div class="exp_bloque">
+        <img src="images/img-6.png" alt="Longevidad y Bienestar Integral" class="exp_img">
+        <button class="exp_boton">
+          Longevidad y Bienestar Integral
+          <span class="flecha"></span>
+        </button>
+        <div class="exp_contenido">
+          <p>La Promesa Premier: Su membresía es la garantía de que está optimizando los 7 Factores de la Longevidad. Elija Quantum 7D para una vida de vitalidad sin límites. Este es el único sistema diseñado para proteger y elevar su futuro bienestar.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="exp_cta">
+      <h1><em>La oportunidad de asegurar el estatus Premier es temporal.<br>
+      Asegure su lugar exclusivo entre los primeros 50 Miembros.</em></h1>
+    </div>
+
+    <div class="read_bt_1"><a href="https://wa.me/573052876006"><img src="images/ws-icon.png">Escribenos</a></div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.exp_boton').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const bloque = btn.closest('.exp_bloque');
+      const contenido = bloque.querySelector('.exp_contenido');
+      const flecha = btn.querySelector('.flecha');
+
+      // Cerrar todos los demás
+      document.querySelectorAll('.exp_contenido.mostrar').forEach(abierto => {
+        if (abierto !== contenido) {
+          abierto.classList.remove('mostrar');
+          abierto.previousElementSibling.querySelector('.flecha')?.classList.remove('rotar');
+        }
+      });
+
+      // Alternar este
+      contenido.classList.toggle('mostrar');
+      flecha.classList.toggle('rotar');
+    });
+  });
+</script>
+
+
+   
 
       <!-- choose section start -->
    <div class="choose_section layout_padding" id="PQRs">
