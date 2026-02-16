@@ -5,12 +5,9 @@
    <!-- basic -->
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!-- mobile metas -->
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
    <!-- site metas -->
-   <title>Quantum 7D</title>
+   <title>Naty Marín</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -29,6 +26,7 @@
    <!-- fonts -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Righteous&display=swap" rel="stylesheet"> -->
  <!--   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
@@ -83,8 +81,9 @@
     <ul>
       <li><a href="#el-metodo">El Método</a></li>
       <li><a href="#la-experiencia">La Experiencia</a></li>
+      <li><a href="#masterclasses">Master Class</a></li>
       <li><a href="#PQRs">Reglamento</a></li>
-      <li><a href="#reservas">Clases y Paquetes</a></li>
+      <li><a href="#contacto">Información</a></li>
     </ul>
   </nav>
 
@@ -264,10 +263,185 @@
 </script>
 
 
+   
+   <!-- client section start -->
+
+<!-- EXPERIENCIA DE MASTER CLASSES -->
+<section class="exclusive_section" id="masterclasses">
+
+  <div class="exclusive_container centered_layout">
+
+    <h2 class="exclusive_title">
+  <span>Master Classes que Definen el Método</span>
+</h2>
+
+
+    <p class="exclusive_subtitle centered">
+      Tres líneas de trabajo. Un mismo propósito: evolución estructural,
+      metabólica y funcional.
+    </p>
+
+    <!-- FILTROS CENTRADOS -->
+    <div class="exclusive_filters centered">
+      <button class="filter_button active" data-class="mandarina">
+        Somatic Training
+      </button>
+      <button class="filter_button" data-class="azul">
+        Fiber Nexus Dynamics
+      </button>
+      <button class="filter_button" data-class="menta">
+        Neuro Boost Intervals Training
+      </button>
+    </div>
+
+    <!-- INFO -->
+    <div id="classInfo" class="class_info line-mandarina centered_block">
+
+      <span class="line_indicator"></span>
+
+      <h3 class="class_title">Somatic Training</h3>
+
+      <p class="class_desc">
+        Movimiento consciente, alineación, propiocepción y movilidad profunda
+        para sostener el bienestar a largo plazo.
+      </p>
+
+      <ul class="class_schedule tooltip_list">
+      </ul>
+
+    </div>
+
+<!--     <p class="exclusive_legend centered">
+      Las Master Classes se programan según evaluación previa y disponibilidad del ecosistema.
+    </p>
+
+    <div class="cta_container">
+      <a href="https://reservaclase.com/quantum7d/index.php"
+         target="_blank"
+         class="cta_button gold">
+        Solicitar Evaluación
+      </a>
+    </div> -->
+
+  </div>
 
 
 
-   <!-- choose section start -->
+          <script>
+const classData = {
+  mandarina: {
+    colorClass: "line-mandarina",
+    title: "Somatic Training",
+    desc: "Movimiento consciente, alineación, propiocepción y movilidad profunda para sostener el bienestar a largo plazo.",
+    classes: [
+      {
+        name: "With Springs",
+        tip: "Evolución segura del Pilates enfocada en control, precisión y alineación corporal."
+      },
+      {
+        name: "Functional Balance Boost",
+        tip: "Entrenamiento de equilibrio dinámico, coordinación y conciencia corporal mediante movimientos fluidos."
+      },
+      {
+        name: "Flow & Motion",
+        tip: "Movilidad y estiramientos profundos para flexibilidad y conexión mente-cuerpo."
+      }
+    ]
+  },
+  azul: {
+    colorClass: "line-azul",
+    title: "Fiber Nexus Dynamics",
+    desc: "Desarrollo de fuerza absoluta, estabilidad central y control estructural del cuerpo.",
+    classes: [
+      {
+        name: "Strength SYSTEM",
+        tip: "Trabajo de fuerza absoluta con cargas altas y control mecánico preciso."
+      },
+      {
+        name: "Strength Core",
+        tip: "Fortalecimiento profundo del núcleo para estabilidad y postura funcional."
+      },
+      {
+        name: "Suspension Strength 2.0",
+        tip: "Entrenamiento en suspensión que desafía fuerza, coordinación y control corporal."
+      }
+    ]
+  },
+  menta: {
+    colorClass: "line-menta",
+    title: "Neuro Boost Intervals Training",
+    desc: "Estimulación metabólica, endocrina y cardiovascular para un cuerpo adaptable y eficiente.",
+    classes: [
+      {
+        name: "HIIT Resilience Fusion",
+        tip: "Alta intensidad funcional para resiliencia metabólica y neuromuscular."
+      },
+      {
+        name: "The Concurrent Edge",
+        tip: "Fuerza y cardio integrados para optimizar rendimiento sistémico."
+      },
+      {
+        name: "Multi-Domain Mastery",
+        tip: "Desarrollo equilibrado de fuerza, resistencia, movilidad y coordinación."
+      },
+      {
+        name: "Endocrine Ride Cycle",
+        tip: "Ciclismo indoor enfocado en estimulación hormonal y metabólica."
+      },
+      {
+        name: "Endocrine Method — Bounce & Flow",
+        tip: "Bajo impacto con rebote y boxing para activación endócrina sin estrés articular."
+      }
+    ]
+  }
+};
+
+const buttons = document.querySelectorAll(".filter_button");
+const classInfo = document.getElementById("classInfo");
+const section = document.querySelector(".exclusive_section");
+
+function updateClass(key) {
+  const selected = classData[key];
+  if (!selected) return;
+
+  section.className = `exclusive_section ${selected.colorClass}`;
+  classInfo.className = `class_info ${selected.colorClass}`;
+
+  classInfo.querySelector(".class_title").textContent = selected.title;
+  classInfo.querySelector(".class_desc").textContent = selected.desc;
+
+  classInfo.querySelector(".class_schedule").innerHTML =
+    selected.classes
+      .map(c => `
+        <li>
+          <strong>${c.name}</strong>
+          <span class="mobile_desc">${c.tip}</span>
+        </li>
+      `)
+      .join("");
+}
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    buttons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    updateClass(btn.dataset.class);
+  });
+});
+
+/* Inicializa correctamente */
+updateClass("mandarina");
+</script>
+
+
+        </div>
+
+
+</section>
+
+   <!-- client section end -->
+
+      <!-- choose section start -->
    <div class="choose_section layout_padding" id="PQRs">
       <div class="container">
          <h1 class="choose_taital">Reglamento de Acceso:</h1>
@@ -363,210 +537,14 @@
   });
 </script>
 
-         <div class="read_bt_1"><a href="https://wa.me/+573052876006"><img src="images/ws-icon.png">Escribenos</a></div>
+         <!-- <div class="read_bt_1"><a href="https://wa.me/573052876006"><img src="images/ws-icon.png">Escribenos</a></div> -->
 
       </div>
    </div>
    <!-- choose section end -->
    
-   <!-- client section start -->
-
-<!-- EXPERIENCIA DE MASTER CLASSES -->
-<section class="exclusive_section" id="reservas">
-  
-  <!-- TÍTULO -->
-  <div class="exclusive_header_full">
-    <h2 class="exclusive_title">Master Classes que Definen el Método</h2>
-    <p class="exclusive_subtitle">
-      Cada línea integra experiencias diseñadas para desarrollar el cuerpo desde distintos sistemas.
-    </p>
-  </div>
-
-  <div class="exclusive_container">
-    <div class="exclusive_grid">
-
-      <!-- ===== COLUMNA IZQUIERDA ===== -->
-      <div class="exclusive_left">
-        <h3 class="exclusive_col_title">Explora Nuestras Líneas de Master Class</h3>
-
-        <!-- FILTROS -->
-        <div class="exclusive_filters">
-          <button class="filter_button active" data-class="mandarina">
-            Somatic Training
-          </button>
-          <button class="filter_button" data-class="azul">
-            Fiber Nexus Dynamics
-          </button>
-          <button class="filter_button" data-class="menta">
-            Neuro Boost Intervals Training
-          </button>
-        </div>
-
-        <!-- INFO DINÁMICA -->
-        <div id="classInfo" class="class_info line-mandarina">
-
-        <!-- línea visual -->
-        <span class="line_indicator"></span>
-
-        <h4 class="class_title">Master Classes</h4>
-
-        <p class="class_desc">
-        Nuestras Líneas Foco responden a una necesidad específica del cuerpo humano, permitiendo diseñar experiencias de
-movimiento que respetan los principios de adaptación, carga, recuperación y longevidad funcional.
-
-        </p>
-
-        <ul class="class_schedule tooltip_list">
-        <!-- Se llena por JS -->
-        </ul>
-          <script>
-const classData = {
-  mandarina: {
-    colorClass: "line-mandarina",
-    title: "Somatic Training",
-    desc: "Movimiento consciente, alineación, propiocepción y movilidad profunda para sostener el bienestar a largo plazo.",
-    classes: [
-      {
-        name: "With Springs",
-        tip: "Evolución segura del Pilates enfocada en control, precisión y alineación corporal."
-      },
-      {
-        name: "Functional Balance Boost",
-        tip: "Entrenamiento de equilibrio dinámico, coordinación y conciencia corporal mediante movimientos fluidos."
-      },
-      {
-        name: "Flow & Motion",
-        tip: "Movilidad y estiramientos profundos para flexibilidad y conexión mente-cuerpo."
-      }
-    ]
-  },
-
-  azul: {
-    colorClass: "line-azul",
-    title: "Fiber Nexus Dynamics",
-    desc: "Desarrollo de fuerza absoluta, estabilidad central y control estructural del cuerpo.",
-    classes: [
-      {
-        name: "Strength SYSTEM",
-        tip: "Trabajo de fuerza absoluta con cargas altas y control mecánico preciso."
-      },
-      {
-        name: "Strength Core",
-        tip: "Fortalecimiento profundo del núcleo para estabilidad y postura funcional."
-      },
-      {
-        name: "Suspension Strength 2.0",
-        tip: "Entrenamiento en suspensión que desafía fuerza, coordinación y control corporal."
-      }
-    ]
-  },
-
-  menta: {
-    colorClass: "line-menta",
-    title: "Neuro Boost Intervals Training",
-    desc: "Estimulación metabólica, endocrina y cardiovascular para un cuerpo adaptable y eficiente.",
-    classes: [
-      {
-        name: "HIIT Resilience Fusion",
-        tip: "Alta intensidad funcional para resiliencia metabólica y neuromuscular."
-      },
-      {
-        name: "The Concurrent Edge",
-        tip: "Fuerza y cardio integrados para optimizar rendimiento sistémico."
-      },
-      {
-        name: "Multi-Domain Mastery",
-        tip: "Desarrollo equilibrado de fuerza, resistencia, movilidad y coordinación."
-      },
-      {
-        name: "Endocrine Ride Cycle",
-        tip: "Ciclismo indoor enfocado en estimulación hormonal y metabólica."
-      },
-      {
-        name: "Endocrine Method — Bounce & Flow",
-        tip: "Bajo impacto con rebote y boxing para activación endócrina sin estrés articular."
-      }
-    ]
-  }
-};
-
-const buttons = document.querySelectorAll(".filter_button");
-const classInfo = document.getElementById("classInfo");
-
-buttons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    buttons.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-
-    const selected = classData[btn.dataset.class];
-    if (!selected) return;
-
-    classInfo.className = `class_info ${selected.colorClass}`;
-    classInfo.querySelector(".class_title").textContent = selected.title;
-    classInfo.querySelector(".class_desc").textContent = selected.desc;
-
-    classInfo.querySelector(".class_schedule").innerHTML =
-      selected.classes
-        .map(c => `<li data-tooltip="${c.tip}">${c.name}</li>`)
-        .join("");
-  });
-});
-</script>
-
-        </div>
-
-
-        <p class="exclusive_legend">
-          Las Master Classes se programan según evaluación previa y disponibilidad del ecosistema.
-        </p>
-      </div>
-
-      <!-- ===== COLUMNA DERECHA ===== -->
-      <div class="exclusive_right">
-        <h3 class="exclusive_col_title">Acceso al Ecosistema</h3>
-
-        <div class="package_card premier">
-          <h4>Miembro Premier — 16 Sesiones / Mes</h4>
-          <p class="prelaunch">Beneficios exclusivos de lanzamiento</p>
-          <p class="limited">Cupos limitados</p>
-          <p class="price">$1.245.000 COP</p>
-        </div>
-
-        <div class="package_card">
-          <h4>Paquete 12 Sesiones</h4>
-          <p class="price">$985.000 COP</p>
-        </div>
-
-        <div class="package_card">
-          <h4>Paquete 8 Sesiones</h4>
-          <p class="price">$785.000 COP</p>
-        </div>
-
-        <div class="package_card">
-          <h4>Sesión Individual</h4>
-          <p class="price">$245.000 COP</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- CTA -->
-  <div class="cta_container">
-    <a href="https://reservaclase.com/quantum7d/index.php"
-       target="_blank"
-       class="cta_button gold">
-      Adquirir Paquete y Reservar
-    </a>
-  </div>
-
-</section>
-
-
-   <!-- client section end -->
-   
    <!-- footer section start -->
-   <div class="footer_section layout_padding">
+<!--    <div class="footer_section layout_padding">
       <div class="container">
          <div class="input_btn_main">
             <input type="text" class="mail_text" placeholder="Pre registro" name="Enter your email">
@@ -581,14 +559,70 @@ buttons.forEach(btn => {
          <div class="social_icon">
             <ul>
                <li><a href="#"><img src="images/fb-icon.png"></a></li>
-               <!-- <li><a href="#"><img src="images/twitter-icon.png"></a></li> -->
+               <li><a href="#"><img src="images/twitter-icon.png"></a></li>
                <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
                <li><a href="#"><img src="images/instagram-icon.png"></a></li>
             </ul>
          </div>
       </div>
-   </div>
+   </div> -->
    <!-- footer section end -->
+
+<section class="contact_section" id="contacto">
+
+  <div class="container contact_grid">
+
+    <!-- MAPA -->
+    <div class="contact_map">
+      <iframe 
+        src="https://www.google.com/maps?q=Naty+Marin&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <!-- INFO CONTACTO -->
+    <div class="contact_info" id="contacto">
+
+      <h2 class="contact_title">Contacto</h2>
+
+      <!-- WhatsApp -->
+      <a 
+        href="https://wa.me/573052876006" 
+        class="whatsapp_btn"
+        target="_blank"
+      >
+        Escríbenos por WhatsApp
+      </a>
+
+      <!-- Datos -->
+      <div class="contact_details">
+      </br>
+        <p>Prensa y mercadeo:</p>
+        <p>📞 +57 310 526 5879</p>
+        <p>✉️ mercadeo@natymarin.com</p>
+      </div>
+
+      <!-- Redes -->
+      <div class="contact_socials">
+        <a href="https://www.instagram.com/natymarinwellbeingconcept" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.instagram.com/natymarinwellbeingconcept" target="_blank" aria-label="Instagram">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://www.tiktok.com/@natymarinwellbeing" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
    <!-- copyright section start -->
    <div class="copyright_section">
       <div class="container">
