@@ -461,6 +461,8 @@ button {
   text-align: center justify;
 }
 
+
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -774,6 +776,32 @@ button {
   flex-wrap: wrap;
   gap: 14px;
   margin-bottom: 40px;
+}
+
+.exclusive_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.exclusive_logo {
+  width: 50%; /* puedes ajustar tamaño */
+}
+
+.exclusive_presenta {
+  font-size: 27px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ce8e00;
+  margin-bottom: 30px;
+}
+
+.exclusive_title {
+  font-size: 38px;
+  font-weight: 600;
+  max-width: 700px;
+  line-height: 1.2;
 }
 
 .filter_button {
