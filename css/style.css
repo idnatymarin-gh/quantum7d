@@ -1248,3 +1248,341 @@ button {
 .copyright_text a:hover {
     color: #e27141;
 }
+
+/* ================================================================
+   SECCIÓN 1: TRANSPARENCIA TÉCNICA
+   ================================================================ */
+
+.tecnica_section {
+  padding: 90px 0;
+  background-color: #F5F4ED;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.tecnica_eyebrow {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ce8e00;
+  margin-bottom: 12px;
+}
+
+.tecnica_titulo {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  padding-bottom: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.tecnica_subtitulo {
+  font-size: 16px;
+  font-weight: 300;
+  color: #666;
+  max-width: 620px;
+  margin: 0 auto 60px;
+  line-height: 1.8;
+}
+
+.tecnica_sellos {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(20px, 5vw, 70px);
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+.tecnica_sello {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 220px;
+  flex: 1;
+  min-width: 140px;
+}
+
+.tecnica_sello img {
+  width: clamp(120px, 20vw, 140px);
+  height: clamp(120px, 20vw, 140px);
+  object-fit: contain;
+  transition: transform 0.4s ease;
+  filter: drop-shadow(0 4px 12px rgba(206, 142, 0, 0.2));
+}
+
+.tecnica_sello:hover img {
+  transform: translateY(-5px);
+}
+
+.tecnica_sello_nombre {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ce8e00;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.tecnica_sello_desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.tecnica_divisor {
+  width: 1px;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, #d3b29d55, transparent);
+  align-self: center;
+  flex-shrink: 0;
+}
+
+.tecnica_declaracion {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 36px 48px;
+  background-color: #fff;
+  border-left: 3px solid #ce8e00;
+  text-align: left;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.05);
+}
+
+.tecnica_declaracion p {
+  font-size: 15px;
+  font-weight: 300;
+  color: #555;
+  line-height: 1.9;
+  margin: 0;
+  font-style: italic;
+}
+
+.tecnica_declaracion strong {
+  color: #214436;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@media (max-width: 768px) {
+  .tecnica_divisor { display: none; }
+  .tecnica_declaracion { padding: 28px 24px; }
+  .tecnica_sellos { gap: 36px; }
+}
+
+/* ================================================================
+   SECCIÓN 2: CUENTA REGRESIVA
+   ================================================================ */
+
+.countdown_section {
+  min-height: 100vh;
+  background-color: #214436;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.countdown_section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(206, 142, 0, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.countdown_eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #d3b29d;
+  margin-bottom: 16px;
+}
+
+.countdown_titulo {
+  font-size: clamp(30px, 5vw, 54px);
+  font-weight: 300;
+  color: #F5F4ED;
+  margin-bottom: 8px;
+  padding-bottom: 0;
+  line-height: 1.2;
+  font-family: 'Roboto', sans-serif;
+}
+
+.countdown_titulo span {
+  color: #ce8e00;
+  font-weight: 500;
+}
+
+.countdown_subtitulo {
+  font-size: 14px;
+  font-weight: 300;
+  color: #d3b29d;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+  opacity: 0.8;
+}
+
+.countdown_reloj {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 3vw, 28px);
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.countdown_unidad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.countdown_numero {
+  font-size: clamp(48px, 9vw, 90px);
+  font-weight: 300;
+  color: #F5F4ED;
+  line-height: 1;
+  min-width: clamp(80px, 13vw, 120px);
+  text-align: center;
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(211, 178, 157, 0.2);
+  padding: 14px 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.countdown_label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #d3b29d;
+  text-transform: uppercase;
+}
+
+.countdown_sep {
+  font-size: clamp(36px, 6vw, 70px);
+  color: rgba(211, 178, 157, 0.35);
+  line-height: 1;
+  margin-top: -20px;
+  align-self: flex-start;
+  font-weight: 300;
+}
+
+.countdown_cupos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 48px;
+  padding: 24px 40px;
+  border: 1px solid rgba(211, 178, 157, 0.2);
+  background: rgba(255,255,255,0.04);
+}
+
+.countdown_cupos_num {
+  font-size: clamp(40px, 6vw, 60px);
+  font-weight: 300;
+  color: #ce8e00;
+  line-height: 1;
+  font-family: 'Roboto', sans-serif;
+}
+
+.countdown_cupos_texto {
+  font-size: 14px;
+  font-weight: 300;
+  color: #d3b29d;
+  line-height: 1.7;
+  text-align: left;
+  opacity: 0.85;
+}
+
+.countdown_cupos_texto strong {
+  display: block;
+  color: #F5F4ED;
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.countdown_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 48px;
+  border-radius: 50px;
+  background-color: #d6b28d;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  box-shadow: 0 12px 30px rgba(214, 178, 141, 0.25);
+}
+
+.countdown_btn:hover {
+  background-color: #e6c49e;
+  box-shadow: 0 18px 45px rgba(214, 178, 141, 0.45);
+  transform: translateY(-3px);
+  color: #fff;
+}
+
+.countdown_btn svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  flex-shrink: 0;
+}
+
+.countdown_nota {
+  margin-top: 22px;
+  font-size: 12px;
+  font-weight: 300;
+  color: #d3b29d;
+  letter-spacing: 1px;
+  opacity: 0.6;
+}
+
+.countdown_finalizado {
+  display: none;
+  text-align: center;
+}
+
+.countdown_finalizado h2 {
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 300;
+  color: #ce8e00;
+  margin-bottom: 16px;
+  padding-bottom: 0;
+}
+
+.countdown_finalizado p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #d3b29d;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 600px) {
+  .countdown_reloj { gap: 8px; }
+  .countdown_sep { font-size: 32px; margin-top: -12px; }
+  .countdown_cupos { flex-direction: column; text-align: center; padding: 24px; }
+  .countdown_cupos_texto { text-align: center; }
+  .countdown_btn { width: 100%; max-width: 300px; justify-content: center; }
+}
+
+</style>
+</head>
+<body>
