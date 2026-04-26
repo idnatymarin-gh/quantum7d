@@ -313,40 +313,207 @@ button {
   line-height: 1.6;
 }
 
-/* === Menú superior centrado === */
+/* ================================================================
+   MENÚ 
+   ================================================================ */
+
 .top_nav {
-  position: absolute;
-  top: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0 40px;
+  background: transparent;
+  transition: background 0.4s ease, padding 0.4s ease;
 }
 
-.top_nav ul {
+.top_nav.scrolled {
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0 40px;
+}
+
+.top_nav_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo pequeño en el nav */
+.top_nav_logo {
+  display: none; /* se muestra solo al hacer scroll */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.top_nav.scrolled .top_nav_logo {
+  display: block;
+  opacity: 1;
+}
+
+.top_nav_logo img {
+  height: 32px;
+  width: auto;
+}
+
+/* Links desktop */
+.top_nav_links {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 30px;
+  gap: 0;
+  flex: 1;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 
-.top_nav li {
-  display: inline-block;
-}
-
-.top_nav li a {
+.top_nav_links li a {
+  display: block;
+  padding: 8px 14px;
   text-decoration: none;
-  color: #fff;
-  font-size: 14px;
+  color: rgba(255,255,255,0.88);
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
-.top_nav li a:hover {
+.top_nav_links li a:hover {
   color: #d3b29d;
 }
 
+.top_nav_links li a.active {
+  color: #ce8e00;
+}
+
+/* Separador entre items */
+.top_nav_links li:not(:last-child) a::after {
+  content: '';
+  display: inline-block;
+}
+
+/* Botón hamburger */
+.top_nav_hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  background: none;
+  border: none;
+  z-index: 101;
+}
+
+.top_nav_hamburger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background-color: #fff;
+  transition: all 0.35s ease;
+  transform-origin: center;
+}
+
+.top_nav_hamburger.open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.top_nav_hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.top_nav_hamburger.open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* Panel móvil */
+.top_nav_mobile {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 10, 0.97);
+  z-index: 99;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.top_nav_mobile.open {
+  display: flex;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.top_nav_mobile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.top_nav_mobile ul li {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.top_nav_mobile ul li a {
+  display: block;
+  padding: 20px 60px;
+  color: rgba(255,255,255,0.8);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.top_nav_mobile ul li a:hover {
+  color: #d3b29d;
+}
+
+.top_nav_mobile_close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.top_nav_mobile_close:hover {
+  color: #d3b29d;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .top_nav_links { display: none; }
+  .top_nav_hamburger { display: flex; }
+  .top_nav { padding: 0 24px; }
+  .top_nav.scrolled { padding: 0 24px; }
+}
+
+@media (max-width: 480px) {
+  .top_nav_mobile ul li a {
+    padding: 18px 40px;
+    font-size: 15px;
+  }
+}
 
 .experiencia {
   padding: 100px 0;
@@ -1250,7 +1417,388 @@ button {
 }
 
 /* ================================================================
-   SECCIÓN 1: TRANSPARENCIA TÉCNICA
+   SECCIÓN: UBICACIÓN PREMIUM
+   ================================================================ */
+
+.ubicacion_section {
+  padding: 100px 0;
+  background-color: #fffefc;
+  font-family: 'Roboto', sans-serif;
+}
+
+.ubicacion_eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #ce8e00;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.ubicacion_titulo {
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: 400;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 12px;
+  padding-bottom: 0;
+  line-height: 1.2;
+}
+
+.ubicacion_subtitulo {
+  font-size: 15px;
+  font-weight: 300;
+  color: #666;
+  max-width: 620px;
+  margin: 0 auto 70px;
+  line-height: 1.85;
+  text-align: center;
+}
+
+.ubicacion_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  max-width: 1080px;
+  margin: 0 auto 70px;
+}
+
+.ubicacion_item {
+  padding: 40px 34px;
+  border: 1px solid #ece8e0;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.ubicacion_item:hover {
+  background-color: #f8f5ef;
+}
+
+.ubicacion_item_icon {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #d3b29d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.ubicacion_item:hover .ubicacion_item_icon {
+  border-color: #ce8e00;
+  background-color: #ce8e00;
+}
+
+.ubicacion_item_icon i {
+  font-size: 16px;
+  color: #d3b29d;
+  transition: color 0.3s ease;
+}
+
+.ubicacion_item:hover .ubicacion_item_icon i {
+  color: #fff;
+}
+
+.ubicacion_item_titulo {
+  font-size: 14px;
+  font-weight: 600;
+  color: #214436;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.ubicacion_item_texto {
+  font-size: 14px;
+  font-weight: 300;
+  color: #777;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.ubicacion_item_linea {
+  position: absolute;
+  bottom: 0;
+  left: 34px;
+  width: 28px;
+  height: 2px;
+  background-color: #ce8e00;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ubicacion_item:hover .ubicacion_item_linea {
+  opacity: 1;
+}
+
+.ubicacion_cta {
+  text-align: center;
+  padding: 40px 48px;
+  background-color: #214436;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.ubicacion_cta p {
+  font-size: 15px;
+  font-weight: 300;
+  color: #d3b29d;
+  line-height: 1.85;
+  margin: 0 0 24px;
+  font-style: italic;
+}
+
+.ubicacion_cta strong {
+  color: #F5F4ED;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ubicacion_cta_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 36px;
+  border-radius: 50px;
+  background-color: #d6b28d;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.35s ease;
+}
+
+.ubicacion_cta_btn:hover {
+  background-color: #e6c49e;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .ubicacion_grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .ubicacion_grid { grid-template-columns: 1fr; }
+  .ubicacion_item { padding: 30px 24px; }
+  .ubicacion_cta { padding: 30px 24px; }
+}
+
+
+/* ================================================================
+   SECCIÓN: BOTANIKAL DECK
+   ================================================================ */
+
+.botanikal_section {
+  padding: 100px 0;
+  background-color: #214436;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.botanikal_section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 55% 55% at 80% 50%, rgba(206,142,0,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.botanikal_inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.botanikal_imagen_wrap {
+  position: relative;
+}
+
+.botanikal_imagen {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.botanikal_imagen_badge {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  background-color: #ce8e00;
+  color: #214436;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 10px 18px;
+}
+
+.botanikal_contenido {
+  color: #F5F4ED;
+}
+
+.botanikal_eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #d3b29d;
+  margin-bottom: 14px;
+}
+
+.botanikal_titulo {
+  font-size: clamp(24px, 3.2vw, 36px);
+  font-weight: 300;
+  color: #F5F4ED;
+  margin-bottom: 8px;
+  padding-bottom: 0;
+  line-height: 1.3;
+}
+
+.botanikal_titulo span {
+  color: #ce8e00;
+}
+
+.botanikal_intro {
+  font-size: 14px;
+  font-weight: 300;
+  color: #d3b29d;
+  line-height: 1.9;
+  margin: 0 0 36px;
+  font-style: italic;
+  border-left: 2px solid #ce8e00;
+  padding-left: 18px;
+}
+
+.botanikal_pilares {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-bottom: 36px;
+}
+
+.botanikal_pilar {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.botanikal_pilar_icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(211,178,157,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.botanikal_pilar_icon i {
+  font-size: 14px;
+  color: #ce8e00;
+}
+
+.botanikal_pilar_texto {
+  flex: 1;
+}
+
+.botanikal_pilar_nombre {
+  font-size: 11px;
+  font-weight: 600;
+  color: #ce8e00;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.botanikal_pilar_desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(245,244,237,0.7);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.botanikal_divider {
+  width: 36px;
+  height: 1px;
+  background-color: rgba(211,178,157,0.35);
+  margin-bottom: 28px;
+}
+
+.botanikal_cita {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(211,178,157,0.75);
+  line-height: 1.9;
+  margin: 0 0 32px;
+  font-style: italic;
+}
+
+.botanikal_cita strong {
+  color: #F5F4ED;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.botanikal_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 36px;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 1px solid rgba(214,178,141,0.5);
+  color: #d6b28d;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.35s ease;
+}
+
+.botanikal_btn:hover {
+  background-color: #d6b28d;
+  border-color: #d6b28d;
+  color: #214436;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 860px) {
+  .botanikal_inner {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .botanikal_imagen_wrap {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .botanikal_imagen_badge {
+    right: 0;
+    bottom: -12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .botanikal_section { padding: 70px 0; }
+  .botanikal_btn { width: 100%; max-width: 280px; justify-content: center; }
+}
+
+/* ================================================================
+   SECCIÓN: TRANSPARENCIA TÉCNICA
    ================================================================ */
 
 .tecnica_section {
@@ -1376,7 +1924,7 @@ button {
 }
 
 /* ================================================================
-   SECCIÓN 2: CUENTA REGRESIVA
+   SECCIÓN: CUENTA REGRESIVA
    ================================================================ */
 
 .countdown_section {
