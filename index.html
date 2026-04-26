@@ -86,18 +86,109 @@
          </div> -->
          <!-- banner section start -->
 <header class="banner_section">
-  <!-- Menú superior centrado -->
-  <nav class="top_nav">
-    <ul>
+
+<!-- ================================================================
+     MENÚ 
+     ================================================================ -->
+
+<nav class="top_nav" id="topNav">
+  <div class="top_nav_inner">
+
+    <!-- Logo (aparece al hacer scroll) -->
+    <div class="top_nav_logo">
+      <img src="images/logo.png" alt="Quantum 7D">
+    </div>
+
+    <!-- Links desktop -->
+    <ul class="top_nav_links">
       <li><a href="#el-metodo">El Método</a></li>
-      <li><a href="#tecnica_section">Aval Internacional</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+      <li><a href="#botanical">Oxigenación</a></li>
+      <li><a href="#tecnica_section">Aval</a></li>
       <li><a href="#masterclasses">Master Class</a></li>
       <li><a href="#la-experiencia">La Experiencia</a></li>
       <li><a href="#PQRs">Reglamento</a></li>
       <li><a href="#preventa">Pre Venta</a></li>
-      <li><a href="#contacto">Información</a></li>
+      <li><a href="#contacto">Contacto</a></li>
     </ul>
-  </nav>
+
+    <!-- Hamburger -->
+    <button class="top_nav_hamburger" id="hamburger" aria-label="Menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- Panel móvil -->
+<div class="top_nav_mobile" id="mobileMenu">
+  <button class="top_nav_mobile_close" id="mobileClose">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+  <ul>
+    <li><a href="#el-metodo">El Método</a></li>
+    <li><a href="#ubicacion">Ubicación Premium</a></li>
+    <li><a href="#botanical">Oxigenación Sistémica</a></li>
+    <li><a href="#tecnica_section">Aval Internacional</a></li>
+    <li><a href="#masterclasses">Master Class</a></li>
+    <li><a href="#la-experiencia">La Experiencia</a></li>
+    <li><a href="#PQRs">Reglamento</a></li>
+    <li><a href="#preventa">Pre Venta</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</div>
+
+<script>
+// ================================================================
+//  MENÚ — scroll effect + hamburger
+// ================================================================
+
+(function() {
+  var nav        = document.getElementById('topNav');
+  var hamburger  = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  var mobileClose = document.getElementById('mobileClose');
+  var mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+
+  // Scroll effect
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 60) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+
+  // Abrir menú móvil
+  if (hamburger) {
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+  }
+
+  // Cerrar con X
+  if (mobileClose) {
+    mobileClose.addEventListener('click', function() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  }
+
+  // Cerrar al hacer click en un link
+  mobileLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+})();
+</script>
 
   <!-- Video de fondo -->
   <video autoplay muted loop playsinline class="bg-video">
@@ -162,8 +253,208 @@
       <!-- header section end -->
 
 <!-- ================================================================
-     HTML SECCIÓN: TRANSPARENCIA TÉCNICA
-     ================================================================ -->
+ SECCIÓN: UBICACIÓN PREMIUM
+ ================================================================ -->
+
+<section class="ubicacion_section" id="ubicacion">
+  <div class="container">
+
+    <p class="ubicacion_eyebrow">Ubicación Premium</p>
+    <h2 class="ubicacion_titulo">Un entorno que ya es parte del protocolo</h2>
+    <p class="ubicacion_subtitulo">
+      Quantum 7D no está en cualquier lugar. Está donde el entorno amplifica cada sesión —
+      Llanogrande, Oriente Antioqueño.
+    </p>
+
+    <div class="ubicacion_grid">
+
+      <div class="ubicacion_item">
+        <div class="ubicacion_item_icon">
+          <i class="fa-solid fa-mountain"></i>
+        </div>
+        <h3 class="ubicacion_item_titulo">Entorno y Paisaje</h3>
+        <p class="ubicacion_item_texto">
+          Montañas, bosques densos y jardines tropicales enmarcan cada sesión.
+          La vista del Oriente Antioqueño es el primer estímulo de tu sistema nervioso
+          antes de entrar al espacio.
+        </p>
+        <div class="ubicacion_item_linea"></div>
+      </div>
+
+      <div class="ubicacion_item">
+        <div class="ubicacion_item_icon">
+          <i class="fa-solid fa-plane-arrival"></i>
+        </div>
+        <h3 class="ubicacion_item_titulo">Accesibilidad y Privacidad</h3>
+        <p class="ubicacion_item_texto">
+          A minutos del Aeropuerto Internacional José María Córdova.
+          Un entorno que garantiza discreción total para nuestros usuarios,
+          sin el ruido ni la exposición de los centros urbanos.
+        </p>
+        <div class="ubicacion_item_linea"></div>
+      </div>
+
+      <div class="ubicacion_item">
+        <div class="ubicacion_item_icon">
+          <i class="fa-solid fa-gem"></i>
+        </div>
+        <h3 class="ubicacion_item_titulo">Polo de Exclusividad</h3>
+        <p class="ubicacion_item_texto">
+          Llanogrande es la zona de mayor crecimiento y proyección premium de la región.
+          El nuevo referente de lujo, bienestar y calidad de vida en Antioquia.
+        </p>
+        <div class="ubicacion_item_linea"></div>
+      </div>
+
+      <div class="ubicacion_item">
+        <div class="ubicacion_item_icon">
+          <i class="fa-solid fa-leaf"></i>
+        </div>
+        <h3 class="ubicacion_item_titulo">Integración con la Naturaleza</h3>
+        <p class="ubicacion_item_texto">
+          El aire puro y el microclima de montaña potencian cada sesión al aire libre
+          en nuestro Botanikal Deck. La naturaleza no es decoración —
+          es parte activa del protocolo de bienestar.
+        </p>
+        <div class="ubicacion_item_linea"></div>
+      </div>
+
+      <div class="ubicacion_item">
+        <div class="ubicacion_item_icon">
+          <i class="fa-solid fa-car"></i>
+        </div>
+        <h3 class="ubicacion_item_titulo">Facilidad de Llegada</h3>
+        <p class="ubicacion_item_texto">
+          Parqueadero privado disponible para nuestros usuarios. En Quantum 7D,
+          la experiencia comienza desde el momento en que llegas —
+          sin estrés, sin fricciones.
+        </p>
+        <div class="ubicacion_item_linea"></div>
+      </div>
+
+      <div class="ubicacion_item">
+        <div class="ubicacion_item_icon">
+          <i class="fa-solid fa-building"></i>
+        </div>
+        <h3 class="ubicacion_item_titulo">Ecosistema de Alto Nivel</h3>
+        <p class="ubicacion_item_texto">
+          Rodeado de los proyectos residenciales, clubes y servicios premium
+          más destacados de Antioquia. Un contexto que refleja y refuerza
+          el estándar de quienes eligen Quantum 7D.
+        </p>
+        <div class="ubicacion_item_linea"></div>
+      </div>
+
+    </div>
+
+    <div class="ubicacion_cta">
+      <p>
+        <strong>Llanogrande, Oriente Antioqueño.</strong> No elegimos esta ubicación
+        por conveniencia. La elegimos porque un ecosistema de bienestar real no puede existir
+        rodeado de lo que genera el estrés que venimos a resolver.
+      </p>
+      <a href="https://wa.me/573052876006" class="ubicacion_cta_btn" target="_blank" rel="noopener">
+        Quiero conocer más
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================================================================
+SECCIÓN: BOTANIKAL DECK
+================================================================ -->
+
+<section class="botanikal_section" id="botanical">
+  <div class="botanikal_inner">
+
+    <div class="botanikal_imagen_wrap">
+      <img src="images/bd.png" alt="Botanikal Deck — Quantum 7D" class="botanikal_imagen">
+      <span class="botanikal_imagen_badge">Botanikal Deck</span>
+    </div>
+
+    <div class="botanikal_contenido">
+
+      <p class="botanikal_eyebrow">Oxigenación Sistémica</p>
+
+      <h2 class="botanikal_titulo">
+        Más allá del movimiento:<br>
+        <span>El Pulmón de la Sintergia</span>
+      </h2>
+
+      <p class="botanikal_intro">
+        No toda actividad física es igual si el aire que respiras está saturado.
+        En nuestro Botanikal Deck, cada inhalación es un protocolo
+        de desinflamación celular.
+      </p>
+
+      <div class="botanikal_pilares">
+
+        <div class="botanikal_pilar">
+          <div class="botanikal_pilar_icon">
+            <i class="fa-solid fa-lungs"></i>
+          </div>
+          <div class="botanikal_pilar_texto">
+            <span class="botanikal_pilar_nombre">Densidad de Oxígeno</span>
+            <p class="botanikal_pilar_desc">
+              A 2.100 msnm, el cuerpo optimiza su eficiencia hematológica.
+              Entrenar aquí mejora la capacidad de transporte de oxígeno
+              de manera natural.
+            </p>
+          </div>
+        </div>
+
+        <div class="botanikal_pilar">
+          <div class="botanikal_pilar_icon">
+            <i class="fa-solid fa-tree"></i>
+          </div>
+          <div class="botanikal_pilar_texto">
+            <span class="botanikal_pilar_nombre">Fitoncidas</span>
+            <p class="botanikal_pilar_desc">
+              La vegetación del deck emite compuestos orgánicos que activan
+              las células NK (Natural Killers), fortaleciendo el sistema
+              inmune con cada sesión al aire libre.
+            </p>
+          </div>
+        </div>
+
+        <div class="botanikal_pilar">
+          <div class="botanikal_pilar_icon">
+            <i class="fa-solid fa-wind"></i>
+          </div>
+          <div class="botanikal_pilar_texto">
+            <span class="botanikal_pilar_nombre">Iones Negativos</span>
+            <p class="botanikal_pilar_desc">
+              El aire de montaña está cargado de iones negativos que reducen
+              el estrés oxidativo, mejoran el estado de ánimo y contrarrestan
+              el impacto de la polución urbana.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="botanikal_divider"></div>
+
+      <p class="botanikal_cita">
+        "Combinamos la tecnología infrarroja inmersiva con sesiones al aire libre
+        en el Botanikal Deck. La unión entre <strong>tecnología y naturaleza</strong> —
+        el balance perfecto de la Sintergia."
+      </p>
+
+      <a href="https://wa.me/573052876006" class="botanikal_btn" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i>
+        Reserva tu experiencia
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================================================================
+SECCIÓN: TRANSPARENCIA TÉCNICA
+================================================================ -->
 
 <section class="tecnica_section" id="tecnica_section">
   <div class="container">
@@ -654,9 +945,9 @@ updateClass("mandarina");
    </div> -->
    <!-- footer section end -->
 
-   <!-- ================================================================
-     HTML SECCIÓN: CUENTA REGRESIVA
-     ================================================================ -->
+<!-- ================================================================
+SECCIÓN: CUENTA REGRESIVA
+================================================================ -->
 
 <section class="countdown_section" id="preventa">
 
