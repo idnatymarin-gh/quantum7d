@@ -18,14 +18,15 @@
  ----------------------------------------*****/
 
 :root {
-  --verde:    #214436;
-  --dorado:   #ce8e00;
-  --rosado:   #d3b29d;
-  --crema:    #F5F4ED;
-  --blanco:   #fffefc;
-  --oscuro:   #1a1a1a;
-  --gris:     #555;
-  --fondo-claro: #faf8f6;
+  --verde:   #214436;
+  --dorado:  #ce8e00;
+  --rosado:  #d3b29d;
+  --crema:   #F5F4ED;
+  --blanco:  #fffefc;
+  --oscuro:  #1a1a1a;
+  --gris:    #555;
+  --negro-calido: #110d08;
+  --negro:   #110d08;
 }
 
 /*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
@@ -524,6 +525,767 @@ button {
 }
 
 /* ================================================================
+   SECCIÓN ANIMADA — VIAJE BIOLÓGICO + PARALLAX
+   Insertar entre .metodo_section y .termica_section
+   ================================================================ */
+
+/* --- PARALLAX HERO --- */
+.viaje_parallax {
+  position: relative;
+  height: 70vh;
+  min-height: 480px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viaje_parallax_img {
+  position: absolute;
+  inset: -20% 0;
+  width: 100%;
+  height: 140%;
+  object-fit: cover;
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+.viaje_parallax_overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(17, 13, 8, 0.3) 0%,
+    rgba(17, 13, 8, 0.6) 50%,
+    rgba(17, 13, 8, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+.viaje_parallax_content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.viaje_parallax_eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--rosado);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.viaje_parallax_titulo {
+  font-size: clamp(32px, 5vw, 62px);
+  font-weight: 200;
+  color: var(--crema);
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.viaje_parallax_titulo em {
+  color: var(--dorado);
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* --- VIAJE BIOLÓGICO — 3 pasos con scroll animation --- */
+.viaje_biologico {
+  background: var(--negro-calido);
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+.viaje_biologico_header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.viaje_biologico_label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--dorado);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.viaje_biologico_subtitulo {
+  font-size: clamp(14px, 2vw, 16px);
+  font-weight: 300;
+  color: rgba(211, 178, 157, 0.7);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.viaje_pasos {
+  display: flex;
+  gap: 0;
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Línea conectora entre pasos */
+.viaje_pasos::before {
+  content: '';
+  position: absolute;
+  top: 48px;
+  left: calc(16.66% + 24px);
+  right: calc(16.66% + 24px);
+  height: 1px;
+  background: linear-gradient(90deg, var(--dorado), rgba(206,142,0,0.2), var(--dorado));
+  z-index: 0;
+}
+
+.viaje_paso {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 24px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.viaje_paso.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.viaje_paso:nth-child(1) { transition-delay: 0.1s; }
+.viaje_paso:nth-child(2) { transition-delay: 0.35s; }
+.viaje_paso:nth-child(3) { transition-delay: 0.6s; }
+
+.viaje_paso_num {
+  width: 96px;
+  height: 96px;
+  border: 1px solid rgba(206, 142, 0, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  background: var(--negro-calido);
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.viaje_paso_num::after {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  border: 1px solid rgba(206, 142, 0, 0.15);
+}
+
+.viaje_paso.visible .viaje_paso_num {
+  border-color: var(--dorado);
+  box-shadow: 0 0 30px rgba(206, 142, 0, 0.15);
+}
+
+.viaje_paso_num i {
+  font-size: 24px;
+  color: var(--dorado);
+}
+
+.viaje_paso_titulo {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--crema);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.viaje_paso_desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(245, 244, 237, 0.6);
+  line-height: 1.85;
+  max-width: 260px;
+}
+
+.viaje_paso_resultado {
+  margin-top: 14px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--dorado);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.5s ease 0.9s;
+}
+
+.viaje_paso.visible .viaje_paso_resultado {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .viaje_pasos {
+    flex-direction: column;
+    gap: 48px;
+  }
+  .viaje_pasos::before { display: none; }
+  .viaje_paso { max-width: 340px; margin: 0 auto; }
+  .viaje_parallax { height: 50vh; }
+}
+
+/* ================================================================
+   PATRÓN VISUAL UNIFICADO — imagen protagonica
+   Para: Ingeniería Térmica, Infrarrojo, Tecnología, Cámara Hiperbárica
+   Alterna imagen izquierda/derecha, imagen 58% del ancho
+   ================================================================ */
+
+.propuesta_section {
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.propuesta_inner {
+  display: grid;
+  min-height: 580px;
+}
+
+/* Imagen a la izquierda */
+.propuesta_inner.img-izq {
+  grid-template-columns: 58% 42%;
+}
+
+/* Imagen a la derecha */
+.propuesta_inner.img-der {
+  grid-template-columns: 42% 58%;
+}
+
+/* Imagen */
+.propuesta_imagen_wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.propuesta_imagen_wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+.propuesta_imagen_wrap:hover img {
+  transform: scale(1.03);
+}
+
+.propuesta_imagen_badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background: var(--dorado);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  z-index: 2;
+}
+
+.propuesta_imagen_wrap.img-der .propuesta_imagen_badge {
+  left: auto;
+  right: 24px;
+}
+
+/* Contenido */
+.propuesta_contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 52px;
+}
+
+/* Fondos alternados */
+.propuesta_section.fondo-oscuro .propuesta_contenido {
+  background: var(--negro-calido);
+  color: var(--crema);
+}
+
+.propuesta_section.fondo-verde .propuesta_contenido {
+  background: var(--verde);
+  color: var(--crema);
+}
+
+.propuesta_section.fondo-crema .propuesta_contenido {
+  background: var(--crema);
+  color: var(--oscuro);
+}
+
+.propuesta_section.fondo-blanco .propuesta_contenido {
+  background: var(--blanco);
+  color: var(--oscuro);
+}
+
+.propuesta_eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--dorado);
+  margin-bottom: 14px;
+  display: block;
+}
+
+.propuesta_titulo {
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 8px;
+  padding-bottom: 0;
+}
+
+.fondo-oscuro .propuesta_titulo,
+.fondo-verde .propuesta_titulo {
+  color: var(--crema);
+}
+
+.fondo-crema .propuesta_titulo,
+.fondo-blanco .propuesta_titulo {
+  color: var(--oscuro);
+}
+
+.propuesta_titulo span {
+  color: var(--dorado);
+}
+
+.propuesta_intro {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.9;
+  margin: 0 0 32px;
+  font-style: italic;
+  border-left: 2px solid var(--dorado);
+  padding-left: 16px;
+}
+
+.fondo-oscuro .propuesta_intro,
+.fondo-verde .propuesta_intro {
+  color: var(--rosado);
+}
+
+.fondo-crema .propuesta_intro,
+.fondo-blanco .propuesta_intro {
+  color: #888;
+}
+
+.propuesta_lista {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 36px;
+}
+
+.propuesta_item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.propuesta_item_icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(206, 142, 0, 0.3);
+}
+
+.propuesta_item_icon i {
+  font-size: 12px;
+  color: var(--dorado);
+}
+
+.propuesta_item_nombre {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--dorado);
+  margin-bottom: 3px;
+  display: block;
+}
+
+.propuesta_item_desc {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.fondo-oscuro .propuesta_item_desc,
+.fondo-verde .propuesta_item_desc {
+  color: rgba(245, 244, 237, 0.65);
+}
+
+.fondo-crema .propuesta_item_desc,
+.fondo-blanco .propuesta_item_desc {
+  color: #777;
+}
+
+.propuesta_nota {
+  font-size: 11px;
+  font-weight: 300;
+  font-style: italic;
+  border-top: 1px solid rgba(206, 142, 0, 0.15);
+  padding-top: 16px;
+  margin: 0;
+}
+
+.fondo-oscuro .propuesta_nota,
+.fondo-verde .propuesta_nota {
+  color: rgba(211, 178, 157, 0.45);
+}
+
+.fondo-crema .propuesta_nota,
+.fondo-blanco .propuesta_nota {
+  color: #aaa;
+}
+
+.propuesta_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  margin-top: 28px;
+  align-self: flex-start;
+}
+
+.fondo-oscuro .propuesta_btn,
+.fondo-verde .propuesta_btn {
+  border: 1px solid rgba(214, 178, 141, 0.4);
+  color: var(--rosado);
+  background: transparent;
+}
+
+.fondo-oscuro .propuesta_btn:hover,
+.fondo-verde .propuesta_btn:hover {
+  background: var(--rosado);
+  color: var(--oscuro);
+  border-color: var(--rosado);
+}
+
+.fondo-crema .propuesta_btn,
+.fondo-blanco .propuesta_btn {
+  border: 1px solid var(--verde);
+  color: var(--verde);
+  background: transparent;
+}
+
+.fondo-crema .propuesta_btn:hover,
+.fondo-blanco .propuesta_btn:hover {
+  background: var(--verde);
+  color: var(--crema);
+}
+
+
+/* ================================================================
+   FIX 1 — SELLOS: protagonicos, grandes, con fondo oscuro
+   Reemplaza completamente .sellos_banner en style.css
+   y el HTML de id="tecnica_section"
+   ================================================================ */
+.sellos_section {
+  background: var(--verde);
+  padding: 100px 20px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sellos_section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(206,142,0,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.sellos_eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--dorado);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.sellos_titulo {
+  font-size: clamp(24px, 3.5vw, 40px);
+  font-weight: 200;
+  color: var(--crema);
+  margin-bottom: 12px;
+  padding-bottom: 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.sellos_subtitulo {
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(211,178,157,0.6);
+  max-width: 560px;
+  margin: 0 auto 70px;
+  line-height: 1.8;
+}
+
+.sellos_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 900px;
+  margin: 0 auto 60px;
+  gap: 0;
+}
+
+.sellos_item {
+  padding: 48px 36px;
+  border: 1px solid rgba(206,142,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transition: background 0.4s ease, border-color 0.4s ease;
+  position: relative;
+}
+
+.sellos_item:hover {
+  background: rgba(206,142,0,0.04);
+  border-color: rgba(206,142,0,0.3);
+}
+
+.sellos_item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 1px;
+  background: var(--dorado);
+  transition: width 0.4s ease;
+}
+
+.sellos_item:hover::after {
+  width: 40px;
+}
+
+.sellos_item_img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 0 20px rgba(206,142,0,0.25))
+    drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.sellos_item:hover .sellos_item_img {
+  transform: translateY(-6px) scale(1.05);
+  filter:
+    drop-shadow(0 0 30px rgba(206,142,0,0.4))
+    drop-shadow(0 8px 20px rgba(0,0,0,0.5));
+}
+
+.sellos_item_nombre {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--dorado);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.sellos_item_desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(245,244,237,0.55);
+  line-height: 1.8;
+  text-align: center;
+  max-width: 220px;
+  margin: 0;
+}
+
+.sellos_declaracion {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 32px 48px;
+  border: 1px solid rgba(206,142,0,0.15);
+  background: rgba(206,142,0,0.03);
+  position: relative;
+}
+
+.sellos_declaracion::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--dorado);
+  opacity: 0.6;
+}
+
+.sellos_declaracion p {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(211,178,157,0.65);
+  line-height: 1.9;
+  margin: 0;
+  font-style: italic;
+  text-align: left;
+}
+
+.sellos_declaracion strong {
+  color: var(--crema);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@media (max-width: 700px) {
+  .sellos_grid { grid-template-columns: 1fr; }
+  .sellos_item { padding: 36px 24px; }
+  .sellos_item_img { width: 100px; height: 100px; }
+  .sellos_declaracion { padding: 28px 24px; }
+}
+
+
+
+/* ================================================================
+   DECLARACIÓN DE SELLOS — banner ancho entre secciones
+   ================================================================ */
+
+.sellos_banner {
+  background: var(--crema);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.sellos_banner_titulo {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--oscuro);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 36px;
+}
+
+.sellos_banner_grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(32px, 6vw, 80px);
+  flex-wrap: wrap;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.sellos_banner_sello {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 120px;
+}
+
+.sellos_banner_sello img {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(206, 142, 0, 0.2));
+  transition: transform 0.4s ease;
+}
+
+.sellos_banner_sello:hover img {
+  transform: translateY(-4px);
+}
+
+.sellos_banner_nombre {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dorado);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sellos_banner_desc {
+  font-size: 12px;
+  font-weight: 300;
+  color: #888;
+  line-height: 1.7;
+  text-align: center;
+  max-width: 160px;
+}
+
+.sellos_banner_divisor {
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, #d3b29d55, transparent);
+  align-self: center;
+  flex-shrink: 0;
+}
+
+.sellos_banner_declaracion {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px 36px;
+  background: #fff;
+  border-left: 3px solid var(--dorado);
+  text-align: left;
+}
+
+.sellos_banner_declaracion p {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--gris);
+  line-height: 1.9;
+  margin: 0;
+  font-style: italic;
+}
+
+.sellos_banner_declaracion strong {
+  color: var(--verde);
+  font-weight: 600;
+  font-style: normal;
+}
+
+@media (max-width: 580px) {
+  .sellos_banner_divisor { display: none; }
+}
+
+</style>
+</head>
+<body>
+
+
+/* ================================================================
    1. SECCIÓN MÉTODO (actualizada)
    Reemplaza completamente el bloque .about_section
    ================================================================ */
@@ -531,8 +1293,33 @@ button {
 .metodo_section {
   width: 100%;
   background: var(--fondo-claro);
-  padding: 100px 0 0 0;
+  padding: 0 !important;
   font-family: 'Roboto', sans-serif;
+}
+
+.metodo_intro_band {
+  background: #0d0a06;
+  padding: 80px 20px 0;
+}
+
+.metodo_header {
+  padding-bottom: 0 !important;
+}
+
+/* Los pilares van sobre fondo crema sin padding arriba */
+.metodo_pilares_band {
+  background: var(--fondo-claro, #faf8f6);
+  padding: 60px 20px 0;
+}
+
+/* Imagen full width debajo de la cita */
+.metodo_cita {
+  margin-top: 60px !important;
+}
+
+/* Ingeniería Térmica — asegurar coherencia */
+#termica .propuesta_inner {
+  min-height: 620px;
 }
 
 .metodo_header {
@@ -1159,102 +1946,74 @@ button {
 
 
 /* ================================================================
-   5. SECCIÓN THE COLLECTIVE OF MASTERY (nueva)
-   Insertar después de .quantum_method_section
+   FIX 2 — THE COLLECTIVE: patrón imagen protagonica
+   Reemplaza completamente .collective_* en style.css y su HTML
    ================================================================ */
 
 .collective_section {
-  padding: 100px 0;
-  background: var(--oscuro);
   font-family: 'Roboto', sans-serif;
   position: relative;
   overflow: hidden;
 }
 
-.collective_section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 50% 60% at 70% 50%, rgba(33,68,54,0.3) 0%, transparent 70%);
-  pointer-events: none;
-}
-
 .collective_inner {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
+  grid-template-columns: 58% 42%;
+  min-height: 620px;
 }
 
-/* Imagen izquierda */
 .collective_imagen_wrap {
   position: relative;
+  overflow: hidden;
 }
 
-.collective_imagen {
+.collective_imagen_wrap img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.8s ease;
+}
+
+.collective_imagen_wrap:hover img {
+  transform: scale(1.03);
 }
 
 .collective_imagen_badge {
   position: absolute;
-  bottom: -16px;
-  left: -16px;
+  bottom: 24px;
+  left: 24px;
   background: var(--verde);
   color: var(--rosado);
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  padding: 10px 18px;
+  padding: 8px 16px;
+  z-index: 2;
 }
 
-/* Placeholder collective */
-.collective_img_placeholder {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  background: linear-gradient(135deg, #141414 0%, #1e1e1e 100%);
+.collective_contenido {
+  background: var(--oscuro);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 12px;
-  border: 1px solid rgba(255,255,255,0.05);
-}
-
-.collective_img_placeholder i {
-  font-size: 40px;
-  color: rgba(211,178,157,0.2);
-}
-
-.collective_img_placeholder span {
-  font-size: 11px;
-  color: rgba(211,178,157,0.3);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-/* Contenido derecha */
-.collective_contenido {
+  padding: 60px 52px;
   color: var(--crema);
 }
 
 .collective_eyebrow {
-  font-size: 11px;
-  font-weight: 500;
+  font-size: 10px;
+  font-weight: 600;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: var(--rosado);
+  color: var(--dorado);
   margin-bottom: 14px;
+  display: block;
 }
 
 .collective_titulo {
-  font-size: clamp(26px, 3.5vw, 38px);
+  font-size: clamp(22px, 3vw, 34px);
   font-weight: 300;
   color: var(--crema);
   margin-bottom: 8px;
@@ -1271,19 +2030,22 @@ button {
   font-weight: 300;
   color: var(--rosado);
   line-height: 1.9;
-  margin: 0 0 36px;
+  margin: 0 0 32px;
+  font-style: italic;
+  border-left: 2px solid var(--dorado);
+  padding-left: 16px;
 }
 
 .collective_valores {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 }
 
 .collective_valor {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   align-items: flex-start;
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -1295,8 +2057,8 @@ button {
 }
 
 .collective_valor_icono {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   border: 1px solid rgba(211,178,157,0.2);
   display: flex;
   align-items: center;
@@ -1305,17 +2067,17 @@ button {
 }
 
 .collective_valor_icono i {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--dorado);
 }
 
 .collective_valor_nombre {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   color: var(--dorado);
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   display: block;
 }
 
@@ -1328,14 +2090,14 @@ button {
 }
 
 .collective_cita {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 300;
-  color: rgba(211,178,157,0.6);
+  color: rgba(211,178,157,0.55);
   line-height: 1.9;
-  margin: 0 0 32px;
+  margin: 0 0 28px;
   font-style: italic;
-  border-left: 2px solid rgba(206,142,0,0.3);
-  padding-left: 18px;
+  border-left: 2px solid rgba(206,142,0,0.2);
+  padding-left: 16px;
 }
 
 .collective_cita strong {
@@ -1348,40 +2110,39 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 15px 36px;
+  padding: 14px 32px;
   border-radius: 50px;
-  background-color: transparent;
+  background: transparent;
   border: 1px solid rgba(214,178,141,0.4);
   color: var(--rosado);
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
   font-weight: 500;
-  letter-spacing: 0.5px;
   text-decoration: none;
   transition: all 0.35s ease;
+  align-self: flex-start;
 }
 
 .collective_btn:hover {
-  background-color: var(--rosado);
+  background: var(--rosado);
   border-color: var(--rosado);
   color: var(--oscuro);
   transform: translateY(-2px);
 }
 
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .collective_inner {
     grid-template-columns: 1fr;
-    gap: 50px;
+    grid-template-rows: 400px auto;
   }
-  .collective_imagen_wrap {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  .collective_imagen_badge {
-    left: 0;
-    bottom: -12px;
-  }
+  .collective_contenido { padding: 44px 28px; }
+  .collective_imagen_badge { bottom: 16px; left: 16px; }
 }
+
+@media (max-width: 480px) {
+  .collective_contenido { padding: 36px 20px; }
+}
+
 
 
 /* ================================================================
@@ -1609,11 +2370,9 @@ button {
 }
 
 /* ================================================================
-   AQUI TERMINA ACTUALIZACION
+   CONTACTO
    ================================================================ */
 
-
-/* === CONTACTO === */
 .contact_section {
   padding: 100px 0;
   background: #e1e0dd;
@@ -2581,6 +3340,355 @@ button {
   .countdown_btn { width: 100%; max-width: 300px; justify-content: center; }
 }
 
-</style>
-</head>
-<body>
+
+/* ================================================================
+   FIX 3 — REGLAMENTO: diseño premium, limpio
+   Reemplaza completamente .choose_section y .acordeon* en style.css
+   ================================================================ */
+
+.reglamento_section {
+  padding: 100px 20px;
+  background: var(--crema);
+  font-family: 'Roboto', sans-serif;
+}
+
+.reglamento_header {
+  max-width: 680px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.reglamento_eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--dorado);
+  margin-bottom: 14px;
+  display: block;
+}
+
+.reglamento_titulo {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 300;
+  color: var(--oscuro);
+  margin-bottom: 14px;
+  padding-bottom: 0;
+  line-height: 1.2;
+}
+
+.reglamento_subtitulo {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--gris);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Grid de bloques */
+.reglamento_grid {
+  max-width: 1080px;
+  margin: 0 auto 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.reglamento_bloque {
+  padding: 44px 36px;
+  border: 1px solid #e8e3dc;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.reglamento_bloque:hover {
+  background: rgba(33,68,54,0.02);
+}
+
+.reglamento_bloque_icon {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #d3b29d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.reglamento_bloque:hover .reglamento_bloque_icon {
+  background: var(--verde);
+  border-color: var(--verde);
+}
+
+.reglamento_bloque_icon i {
+  font-size: 16px;
+  color: var(--rosado);
+  transition: color 0.3s ease;
+}
+
+.reglamento_bloque:hover .reglamento_bloque_icon i {
+  color: var(--crema);
+}
+
+.reglamento_bloque_titulo {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--verde);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  padding-bottom: 0;
+  line-height: 1.4;
+}
+
+.reglamento_bloque_items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reglamento_bloque_item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.reglamento_bloque_item::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--dorado);
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.reglamento_bloque_item p {
+  font-size: 13px;
+  font-weight: 300;
+  color: #777;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.reglamento_bloque_item strong {
+  color: var(--oscuro);
+  font-weight: 500;
+}
+
+.reglamento_bloque_linea {
+  position: absolute;
+  bottom: 0;
+  left: 36px;
+  width: 28px;
+  height: 2px;
+  background: var(--dorado);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.reglamento_bloque:hover .reglamento_bloque_linea {
+  opacity: 1;
+}
+
+/* Acordeón de exclusiones médicas */
+.reglamento_medico {
+  max-width: 1080px;
+  margin: 0 auto 60px;
+  border: 1px solid #e8e3dc;
+}
+
+.reglamento_medico_header {
+  padding: 32px 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  user-select: none;
+}
+
+.reglamento_medico_header:hover {
+  background: rgba(33,68,54,0.02);
+}
+
+.reglamento_medico_icono {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #d3b29d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.reglamento_medico_icono i {
+  font-size: 16px;
+  color: var(--rosado);
+}
+
+.reglamento_medico_label {
+  flex: 1;
+}
+
+.reglamento_medico_label h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--verde);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  padding-bottom: 0;
+}
+
+.reglamento_medico_label p {
+  font-size: 13px;
+  font-weight: 300;
+  color: #999;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.reglamento_medico_arrow {
+  font-size: 14px;
+  color: var(--dorado);
+  transition: transform 0.35s ease;
+  flex-shrink: 0;
+}
+
+.reglamento_medico.open .reglamento_medico_arrow {
+  transform: rotate(180deg);
+}
+
+.reglamento_medico_body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  border-top: 0px solid #e8e3dc;
+}
+
+.reglamento_medico.open .reglamento_medico_body {
+  max-height: 800px;
+  border-top: 1px solid #e8e3dc;
+}
+
+.reglamento_medico_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  padding: 0;
+}
+
+.reglamento_medico_cat {
+  padding: 28px 40px;
+  border-right: 1px solid #e8e3dc;
+  border-bottom: 1px solid #e8e3dc;
+}
+
+.reglamento_medico_cat:nth-child(even) {
+  border-right: none;
+}
+
+.reglamento_medico_cat:last-child,
+.reglamento_medico_cat:nth-last-child(2) {
+  border-bottom: none;
+}
+
+.reglamento_medico_cat_titulo {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--dorado);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reglamento_medico_cat_titulo i {
+  font-size: 12px;
+}
+
+.reglamento_medico_lista {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.reglamento_medico_lista li {
+  font-size: 12px;
+  font-weight: 300;
+  color: #777;
+  line-height: 1.6;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.reglamento_medico_lista li::before {
+  content: '';
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--rosado);
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+/* Nota de aceptación al final */
+.reglamento_aceptacion {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 36px 48px;
+  background: var(--verde);
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.reglamento_aceptacion_icon {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(211,178,157,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.reglamento_aceptacion_icon i {
+  font-size: 16px;
+  color: var(--dorado);
+}
+
+.reglamento_aceptacion_texto p {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(211,178,157,0.75);
+  line-height: 1.85;
+  margin: 0;
+  font-style: italic;
+}
+
+.reglamento_aceptacion_texto strong {
+  color: var(--crema);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@media (max-width: 900px) {
+  .reglamento_grid { grid-template-columns: 1fr; }
+  .reglamento_bloque { border-bottom: 1px solid #e8e3dc; }
+  .reglamento_medico_grid { grid-template-columns: 1fr; }
+  .reglamento_medico_cat { border-right: none; }
+}
+
+@media (max-width: 600px) {
+  .reglamento_medico_header { padding: 24px 20px; }
+  .reglamento_medico_cat { padding: 24px 20px; }
+  .reglamento_aceptacion { padding: 28px 20px; flex-direction: column; }
+  .reglamento_bloque { padding: 32px 24px; }
+}
