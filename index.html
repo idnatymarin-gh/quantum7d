@@ -97,17 +97,18 @@
   <div class="top_nav_inner">
     <!-- Logo (aparece al hacer scroll) -->
     <div class="top_nav_logo">
-      <img src="images/logo.png" alt="Quantum 7D">
+      <img src="images/Logo Quantum 7D.png" alt="Quantum 7D">
     </div>
     <ul class="top_nav_links">
       <li><a href="#metodo">Método</a></li>
-      <li><a href="#ubicacion">Ubicación</a></li>
-      <li><a href="#botanical">Cámara Hiperbárica</a></li>
-      <li><a href="#tecnica_section">Tecnología</a></li>
       <li><a href="#termica">Ingeniería Térmica</a></li>
+      <li><a href="#infrarrojo">Infrarrojo</a></li>
+      <li><a href="#tecnica_section">Tecnología</a></li>
+      <li><a href="#botanical">Cámara Hiperbárica</a></li>
       <li><a href="#quantum-method">Metodología</a></li>
-      <li><a href="#collective">The Collective</a></li>
       <!-- <li><a href="#la-experiencia">La Experiencia</a></li> -->
+      <li><a href="#ubicacion">Ubicación</a></li>
+      <li><a href="#collective">The Collective</a></li>
       <li><a href="#paquetes">Sintergia Genesis</a></li>
       <li><a href="#PQRs">Reglamento</a></li>
       <li><a href="#contacto">Contacto</a></li>
@@ -123,17 +124,18 @@
     <i class="fa-solid fa-xmark"></i>
   </button>
   <ul>
-    <li><a href="#metodo">Método</a></li>
-    <li><a href="#ubicacion">Ubicación Premium</a></li>
-    <li><a href="#botanical">Cámara Hiperbárica Natural</a></li>
-    <li><a href="#tecnica_section">Tecnología Certificada</a></li>
-    <li><a href="#termica">Ingeniería Térmica</a></li>
-    <li><a href="#quantum-method">Metodología</a></li>
-    <li><a href="#collective">The Collective of Mastery</a></li>
-    <!-- <li><a href="#la-experiencia">La Experiencia</a></li> -->
-    <li><a href="#paquetes">Sintergia Genesis</a></li>
-    <li><a href="#PQRs">Reglamento</a></li>
-    <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#metodo">Método</a></li>
+      <li><a href="#termica">Ingeniería Térmica</a></li>
+      <li><a href="#infrarrojo">Infrarrojo</a></li>
+      <li><a href="#tecnica_section">Tecnología</a></li>
+      <li><a href="#botanical">Cámara Hiperbárica</a></li>
+      <li><a href="#quantum-method">Metodología</a></li>
+      <!-- <li><a href="#la-experiencia">La Experiencia</a></li> -->
+      <li><a href="#ubicacion">Ubicación</a></li>
+      <li><a href="#collective">The Collective</a></li>
+      <li><a href="#paquetes">Sintergia Genesis</a></li>
+      <li><a href="#PQRs">Reglamento</a></li>
+      <li><a href="#contacto">Contacto</a></li>
   </ul>
 </div>
 
@@ -205,8 +207,9 @@
 <!-- banner section end -->
 
 
+
 <!-- ================================================================
-     1. SECCIÓN MÉTODO (reemplaza completamente .about_section)
+     SECCIÓN MÉTODO (reemplaza completamente .about_section)
      id="metodo" en lugar de id="el-metodo"
      ================================================================ -->
 
@@ -266,7 +269,8 @@
       <h3 class="metodo_pilar_titulo">Nuestra Misión</h3>
       <p class="metodo_pilar_texto">
         Guiarte hacia tu propia Sintergia. A través de la ingeniería biológica
-        y la maestría del movimiento, te devolvemos el poder sobre tu propia biología.
+        y la maestría del movimiento, te devolvemos el poder sobre tu propia biología. en un entorno donde te encuentras y te acompañas con la energía
+        de más personas que comparten tu mismo propósito.
       </p>
     </div>
 
@@ -283,10 +287,553 @@
 
   <!-- IMAGEN FULL WIDTH — reemplaza images/about-img.png -->
   <!-- Coloca aquí una imagen horizontal del espacio: salon, deck o panorámica -->
-  <div class="metodo_img_wrap">
+  <!-- <div class="metodo_img_wrap">-->
     <!-- <img src="images/metodo-banner.png" alt="Quantum 7D — El Método"> -->
-    <img src="images/about-img.png" alt="Quantum 7D — El Método">
+    <!-- <img src="images/about-img.png" alt="Quantum 7D — El Método">-->
     <!-- Si aún no tienes la imagen, usa: src="images/about-img.png" -->
+  <!-- </div> -->
+
+</section>
+
+
+
+<!-- ================================================================
+     SECCIÓN ANIMADA — VIAJE BIOLÓGICO
+     Insertar DESPUÉS de .metodo_section y ANTES de .termica_section
+     ================================================================ -->
+
+<!-- PARTE 1: Parallax con imagen de fondo -->
+<div class="viaje_parallax" id="viaje-parallax">
+  <!-- IMAGEN: usa la imagen 4 (sesión real en el salón con infrarrojos)
+       Guardar como: images/viaje-parallax.jpg -->
+  <img
+    src="images/viaje-parallax.png"
+    alt="El Viaje Biológico — Quantum 7D"
+    class="viaje_parallax_img"
+    id="parallaxImg"
+  >
+  <div class="viaje_parallax_overlay"></div>
+  <div class="viaje_parallax_content">
+    <h2 class="viaje_parallax_titulo">
+      Tres ambientes.<br>
+      <em>Un viaje biológico completo.</em>
+    </h2>
+  </div>
+</div>
+
+<!-- PARTE 2: Los 3 pasos animados -->
+<div class="viaje_biologico">
+
+  <div class="viaje_biologico_header">
+    <span class="viaje_biologico_label">Viaje Biológico</span>
+    <p class="viaje_biologico_subtitulo">
+      Cada sesión en Quantum 7D sigue una secuencia clínica diseñada
+      para maximizar tu respuesta biológica en tres fases progresivas.
+    </p>
+  </div>
+
+  <div class="viaje_pasos" id="viajePasos">
+
+    <div class="viaje_paso" data-viaje="1">
+      <div class="viaje_paso_num">
+        <i class="fa-solid fa-fire"></i>
+      </div>
+      <h3 class="viaje_paso_titulo">Preparación Térmica</h3>
+      <p class="viaje_paso_desc">
+        El salón de ingeniería térmica abre los canales de eliminación
+        y prepara el tejido muscular con estrés térmico controlado.
+        El cuerpo entra en estado de hormesis.
+      </p>
+      <span class="viaje_paso_resultado">Stage 01 — Calor Ambiental</span>
+    </div>
+
+    <div class="viaje_paso" data-viaje="2">
+      <div class="viaje_paso_num">
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+      <h3 class="viaje_paso_titulo">Reparación Celular</h3>
+      <p class="viaje_paso_desc">
+        La tecnología infrarroja penetra hasta 4 cm en el tejido,
+        activando la mitocondria, produciendo ATP y reduciendo
+        la inflamación a nivel cuántico y celular.
+      </p>
+      <span class="viaje_paso_resultado">Stage 02 — Fotobiomodulación</span>
+    </div>
+
+    <div class="viaje_paso" data-viaje="3">
+      <div class="viaje_paso_num">
+        <i class="fa-solid fa-wind"></i>
+      </div>
+      <h3 class="viaje_paso_titulo">Super-Oxigenación</h3>
+      <p class="viaje_paso_desc">
+        Botanikal Deck sella el proceso. Oxígeno puro de montaña,
+        fitoncidas activos e iones negativos limpian el sistema
+        y sellan la recuperación neurológica.
+      </p>
+      <span class="viaje_paso_resultado">Stage 03 — Cámara Hiperbárica Natural</span>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+/* Parallax scroll */
+(function() {
+  var img = document.getElementById('parallaxImg');
+  if (!img) return;
+  window.addEventListener('scroll', function() {
+    var section = document.getElementById('viaje-parallax');
+    if (!section) return;
+    var rect = section.getBoundingClientRect();
+    var progress = -rect.top / (window.innerHeight + rect.height);
+    var y = progress * 30;
+    img.style.transform = 'translateY(' + y + '%)';
+  }, { passive: true });
+})();
+
+/* Scroll animation para los pasos */
+(function() {
+  var pasos = document.querySelectorAll('.viaje_paso');
+  if (!pasos.length) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+  pasos.forEach(function(p) { observer.observe(p); });
+})();
+</script>
+
+
+<!-- ================================================================
+     SECCIÓN INGENIERÍA TÉRMICA (patrón imagen protagonica)
+     id="termica" — imagen a la IZQUIERDA, fondo oscuro derecha
+     IMAGEN RECOMENDADA: imagen 4 (sesión real con infrarrojos)
+     o imagen 2 (retrato mujer con calor)
+     Guardar como: images/termica-img.jpg
+     ================================================================ -->
+
+<section class="propuesta_section fondo-oscuro" id="termica">
+  <div class="propuesta_inner img-izq">
+
+    <div class="propuesta_imagen_wrap">
+      <img src="images/termica-img.png" alt="Ingeniería Térmica — Quantum 7D">
+      <span class="propuesta_imagen_badge">Ingeniería Térmica</span>
+    </div>
+
+    <div class="propuesta_contenido">
+      <span class="propuesta_eyebrow">Ingeniería Biológica</span>
+      <h2 class="propuesta_titulo">
+        El calor no es el enemigo.<br>
+        <span>Es el vehículo.</span>
+      </h2>
+      <p class="propuesta_intro">
+        Un músculo rígido genera resistencia al movimiento. El calor, aplicado con precisión,
+        es un biocatalizador. En Quantum 7D cada grado está calculado para optimizar
+        tu respuesta biológica — no para que sudes más, sino para que tus células reparen más.
+      </p>
+      <div class="propuesta_lista">
+        <div class="propuesta_item">
+          <div class="propuesta_item_icon"><i class="fa-solid fa-dna"></i></div>
+          <div>
+            <span class="propuesta_item_nombre">Hormesis Térmica</span>
+            <p class="propuesta_item_desc">Activa las Proteínas de Choque Térmico (HSP) para reparar tejidos y proteger tu sistema nervioso del estrés cotidiano.</p>
+          </div>
+        </div>
+        <div class="propuesta_item">
+          <div class="propuesta_item_icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div>
+            <span class="propuesta_item_nombre">Eficiencia Cardiovascular</span>
+            <p class="propuesta_item_desc">El esfuerzo térmico aumenta el volumen plasmático y mejora el transporte de oxígeno a los músculos.</p>
+          </div>
+        </div>
+        <div class="propuesta_item">
+          <div class="propuesta_item_icon"><i class="fa-solid fa-droplet"></i></div>
+          <div>
+            <span class="propuesta_item_nombre">Plasticidad del Colágeno</span>
+            <p class="propuesta_item_desc">El calor transforma la viscosidad del tejido conectivo, permitiendo movimientos más profundos y seguros.</p>
+          </div>
+        </div>
+        <div class="propuesta_item">
+          <div class="propuesta_item_icon"><i class="fa-solid fa-bolt"></i></div>
+          <div>
+            <span class="propuesta_item_nombre">Optimización Metabólica</span>
+            <p class="propuesta_item_desc">La temperatura elevada acelera la tasa metabólica basal y favorece la desintoxicación linfática por vasodilatación.</p>
+          </div>
+        </div>
+      </div>
+      <p class="propuesta_nota">Modalidades: Movilidad — Pilates — Respiración Consciente — HIIT. Cada una bajo protocolos clínicos propietarios de Natalia Marín, MSc. en Neurociencias.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================================================================
+     SECCIÓN INFRARROJO (patrón imagen protagonica)
+     id="infrarrojo" — imagen a la DERECHA, fondo verde izquierda
+     IMAGEN RECOMENDADA: imagen 1 (células biológicas glowing) o imagen 3 (hombro con luz)
+     Guardar como: images/infrarrojo-img.jpg
+     ================================================================ -->
+
+<section class="propuesta_section fondo-verde" id="infrarrojo">
+  <div class="propuesta_inner img-der">
+
+    <div class="propuesta_contenido">
+      <span class="propuesta_eyebrow">Fotobiomodulación</span>
+      <h2 class="propuesta_titulo">
+        Más allá del calor.<br>
+        <span>Luz que repara desde adentro.</span>
+      </h2>
+      <p class="propuesta_intro">
+        Mientras el calor ambiental actúa en la superficie, el infrarrojo de onda larga
+        penetra hasta 4 cm dentro del tejido. No calienta el aire. Te calienta a ti — desde adentro.
+        Es otra dimensión de la terapia térmica.
+      </p>
+      <div class="propuesta_lista">
+        <div class="propuesta_item">
+          <div class="propuesta_item_icon"><i class="fa-solid fa-microscope"></i></div>
+          <div>
+            <span class="propuesta_item_nombre">Infrarrojo de Onda Larga (Far Infrared)</span>
+            <p class="propuesta_item_desc">La misma tecnología utilizada en incubadoras médicas. Penetra profundo, activa la mitocondria y produce ATP — energía celular real.</p>
+          </div>
+        </div>
+        <div class="propuesta_item">
+          <div class="propuesta_item_icon"><i class="fa-solid fa-layer-group"></i></div>
+          <div>
+            <span class="propuesta_item_nombre">Infrarrojo de Piso — Emisión Sistémica</span>
+            <p class="propuesta_item_desc">El estímulo nace desde la base, permitiendo una distribución térmica uniforme que los paneles convencionales no pueden replicar.</p>
+          </div>
+        </div>
+        <div class="propuesta_item">
+          <div class="propuesta_item_icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div>
+            <span class="propuesta_item_nombre">Desintoxicación y Regeneración</span>
+            <p class="propuesta_item_desc">Reduce inflamación, acelera recuperación muscular, renueva la piel y aumenta la producción natural de colágeno.</p>
+          </div>
+        </div>
+      </div>
+      <a href="https://wa.me/573052876006" class="propuesta_btn" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i>
+        Conocer más
+      </a>
+    </div>
+
+    <div class="propuesta_imagen_wrap">
+      <img src="images/infrarrojo-img.jpg" alt="Tecnología Infrarroja — Quantum 7D">
+      <span class="propuesta_imagen_badge">Far Infrared</span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================================================================
+     FIX 1 — SELLOS PROTAGONICOS
+     Reemplaza completamente <section id="tecnica_section">
+     ================================================================ -->
+
+<section class="sellos_section" id="tecnica_section">
+
+  <span class="sellos_eyebrow">Tecnología Certificada</span>
+  <h2 class="sellos_titulo">Transparencia Técnica</h2>
+  <p class="sellos_subtitulo">
+    En Quantum 7D la tecnología no es un accesorio — es un agente terapéutico.
+    Nuestro estándar no es el mercado local, sino la regulación internacional
+    de salud humana y ambiental.
+  </p>
+
+  <div class="sellos_grid">
+
+    <div class="sellos_item">
+      <img src="images/ce.png" alt="Certificación CE" class="sellos_item_img">
+      <span class="sellos_item_nombre">CE</span>
+      <p class="sellos_item_desc">
+        Conformité Européenne — garantía de seguridad humana bajo las directivas
+        más estrictas de la Unión Europea para dispositivos de contacto continuo.
+      </p>
+    </div>
+
+    <div class="sellos_item">
+      <img src="images/rosh.png" alt="Certificación RoHS" class="sellos_item_img">
+      <span class="sellos_item_nombre">RoHS</span>
+      <p class="sellos_item_desc">
+        Libre de plomo, mercurio y cadmio. El aire que respiras en cada sesión
+        es 100% puro — protegiendo tu sistema endocrino en cada visita.
+      </p>
+    </div>
+
+    <div class="sellos_item">
+      <img src="images/fcc.png" alt="Certificación FCC" class="sellos_item_img">
+      <span class="sellos_item_nombre">FCC</span>
+      <p class="sellos_item_desc">
+        Federal Communications Commission — el estímulo infrarrojo es limpio
+        y no genera interferencias en tu entorno bioeléctrico.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="sellos_declaracion">
+    <p>
+      Nuestros sistemas de optimización infrarroja de piso emiten el estímulo desde la base,
+      generando una <strong>distribución uniforme e inmersiva</strong> que los paneles convencionales
+      no pueden replicar. Contamos con los <strong>Test Reports internacionales</strong> que respaldan
+      cada certificado — el único centro en Colombia con este nivel de trazabilidad técnica
+      en infrarrojo de piso.
+    </p>
+  </div>
+
+</section>
+
+
+<!-- ================================================================
+     SECCIÓN CÁMARA HIPERBÁRICA NATURAL (patrón imagen protagonica)
+     id="botanical" — imagen a la IZQUIERDA, fondo oscuro derecha
+     IMAGEN: mantener images/bd.png o reemplazar por foto real del deck
+     ================================================================ -->
+
+<section class="propuesta_section fondo-oscuro" id="botanical">
+  <div class="propuesta_inner img-izq">
+
+    <div class="propuesta_imagen_wrap">
+      <img src="images/bd.png" alt="Botanikal Deck — Cámara Hiperbárica Natural">
+      <span class="propuesta_imagen_badge">Cámara Hiperbárica Natural</span>
+    </div>
+
+    <div class="propuesta_contenido">
+      <span class="propuesta_eyebrow">Oxigenación Sistémica</span>
+      <h2 class="propuesta_titulo">
+        Botanikal Deck:<br>
+        <span>El Pulmón de la Sintergia</span>
+      </h2>
+      <p class="propuesta_intro">
+        No necesitamos encerrarte en una cámara. El Oriente Antioqueño es uno de los pocos lugares
+        en Colombia donde se exporta aire al extranjero. Aquí, la naturaleza ya es hiperbárica.
+        Cada inhalación es un protocolo de desinflamación celular.
+      </p>
+      <div class="propuesta_lista">
+        <div class="propuesta_item">
+          <div class="propuesta_item_icon"><i class="fa-solid fa-lungs"></i></div>
+          <div>
+            <span class="propuesta_item_nombre">Densidad de Oxígeno</span>
+            <p class="propuesta_item_desc">A 2.100 msnm el cuerpo optimiza su eficiencia hematológica. Entrenar aquí mejora la capacidad de transporte de oxígeno de manera natural.</p>
+          </div>
+        </div>
+        <div class="propuesta_item">
+          <div class="propuesta_item_icon"><i class="fa-solid fa-tree"></i></div>
+          <div>
+            <span class="propuesta_item_nombre">Fitoncidas</span>
+            <p class="propuesta_item_desc">La vegetación emite compuestos orgánicos que activan las células NK (Natural Killers), fortaleciendo el sistema inmune con cada sesión.</p>
+          </div>
+        </div>
+        <div class="propuesta_item">
+          <div class="propuesta_item_icon"><i class="fa-solid fa-wind"></i></div>
+          <div>
+            <span class="propuesta_item_nombre">Iones Negativos</span>
+            <p class="propuesta_item_desc">El aire de montaña reduce el estrés oxidativo, mejora el estado de ánimo y contrarresta el impacto de la polución urbana y las pantallas.</p>
+          </div>
+        </div>
+      </div>
+      <a href="https://wa.me/573052876006" class="propuesta_btn" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i>
+        Reserva tu experiencia
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ================================================================
+     FIX 2 — THE COLLECTIVE: patrón imagen protagonica
+     Reemplaza completamente <section class="collective_section" id="collective">
+     ================================================================ -->
+
+<section class="collective_section" id="collective">
+  <div class="collective_inner">
+
+    <div class="collective_contenido">
+
+      <span class="collective_eyebrow">La Facultad de la Evolución</span>
+
+      <h2 class="collective_titulo">
+        No es quién dicta la sesión.<br>
+        <span>Es la ciencia detrás de ella.</span>
+      </h2>
+
+      <p class="collective_intro">
+        Hemos eliminado la figura del instructor convencional para dar paso
+        a los Health Curators. Un colectivo de expertos locales e internacionales
+        seleccionados por su rigor científico y su capacidad de guiar el cuerpo
+        hacia la Sintergia.
+      </p>
+
+      <div class="collective_valores">
+
+        <div class="collective_valor">
+          <div class="collective_valor_icono">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div>
+            <span class="collective_valor_nombre">Expertise Global</span>
+            <p class="collective_valor_desc">
+              Acceso exclusivo a una red de especialistas en biomecánica, fisiatría
+              y artes del bienestar. Residencias internacionales que traen a Colombia
+              las últimas fronteras del movimiento.
+            </p>
+          </div>
+        </div>
+
+        <div class="collective_valor">
+          <div class="collective_valor_icono">
+            <i class="fa-solid fa-flask"></i>
+          </div>
+          <div>
+            <span class="collective_valor_nombre">Quantum Method</span>
+            <p class="collective_valor_desc">
+              Todo miembro del colectivo opera bajo nuestra metodología propietaria.
+              El método es la ciencia que garantiza tu resultado — sin importar quién guíe la sesión.
+            </p>
+          </div>
+        </div>
+
+        <div class="collective_valor">
+          <div class="collective_valor_icono">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <div>
+            <span class="collective_valor_nombre">Certificación Interna</span>
+            <p class="collective_valor_desc">
+              Cada facilitador está certificado en la aplicación biológica
+              de nuestra tecnología. Tu seguridad y progreso respaldados
+              por evidencia clínica en cada sesión.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="collective_cita">
+        "En Quantum 7D, el maestro es el guía.
+        Pero el <strong>Quantum Method es la ciencia que garantiza tu resultado</strong>.
+        Sin importar quién dicte la sesión, el protocolo asegura que cada movimiento
+        tenga un propósito biológico exacto."
+      </p>
+
+      <a href="https://wa.me/573052876006" class="collective_btn" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i>
+        Conocer el programa
+      </a>
+
+    </div>
+    <div class="collective_imagen_wrap">
+      <!--
+        IMAGEN: grupo en sesión con facilitador — cuadrada o vertical
+        Guardar como: images/collective-img.jpg
+        Recomendada: imagen real del salón con personas o Botanikal Deck
+      -->
+      <img src="images/collective-img.jpg" alt="The Collective of Mastery — Quantum 7D">
+      <span class="collective_imagen_badge">The Collective of Mastery</span>
+    </div>
+  </div>
+</section>
+<!-- ================================================================
+     QUANTUM METHOD — METODOLOGÍA (nueva)
+     Reemplaza completamente la sección .exclusive_section
+     ================================================================ -->
+
+<section class="quantum_method_section" id="quantum-method">
+
+  <div class="quantum_method_header">
+    <p class="quantum_method_eyebrow">Ingeniería Biológica de Alta Precisión</p>
+    <h2 class="quantum_method_titulo">
+      No entrenamos músculos.<br>
+      <span>Reprogramamos sistemas.</span>
+    </h2>
+    <p class="quantum_method_tagline">
+      Bajo la dirección de Natalia Marín, cada protocolo en Quantum 7D está codificado
+      para reprogramar tu sistema nervioso y hormonal en comunidad.
+      No asistes a clases. Te integras a un protocolo de <em>ingeniería biológica</em>.
+    </p>
+  </div>
+
+  <div class="quantum_method_pilares">
+
+    <div class="quantum_pilar">
+      <div class="quantum_pilar_icono">
+        <i class="fa-solid fa-brain"></i>
+      </div>
+      <h3 class="quantum_pilar_titulo">Neuro-Arquitectura del Movimiento</h3>
+      <p class="quantum_pilar_desc">
+        No solo entrenamos músculos. Entrenamos el sistema nervioso central para generar
+        patrones de movimiento que trasciendan las limitaciones de la realidad cotidiana.
+        El entorno es parte activa del protocolo.
+      </p>
+      <p class="quantum_pilar_resultado">Resultado: Claridad, foco y presencia sostenida.</p>
+    </div>
+
+    <div class="quantum_pilar">
+      <div class="quantum_pilar_icono">
+        <i class="fa-solid fa-temperature-high"></i>
+      </div>
+      <h3 class="quantum_pilar_titulo">Hormesis Clínica Controlada</h3>
+      <p class="quantum_pilar_desc">
+        El uso preciso del calor térmico e infrarrojo genera un estrés positivo que
+        optimiza el control hormonal y la regeneración celular. Cada sesión activa
+        los mecanismos de reparación más poderosos de tu biología.
+      </p>
+      <p class="quantum_pilar_resultado">Resultado: Regeneración profunda. Longevidad activa.</p>
+    </div>
+
+    <div class="quantum_pilar">
+      <div class="quantum_pilar_icono">
+        <i class="fa-solid fa-infinity"></i>
+      </div>
+      <h3 class="quantum_pilar_titulo">Sintergia Basada en Evidencia</h3>
+      <p class="quantum_pilar_desc">
+        La unificación de cuerpo, mente y entorno se aborda desde la perspectiva
+        científica. Buscamos una coherencia profunda que genere un Bienestar Exponencial
+        medible en la salud de cada individuo.
+      </p>
+      <p class="quantum_pilar_resultado">Resultado: Bienestar exponencial. Medible. Real.</p>
+    </div>
+
+  </div>
+
+
+
+  <!-- PARTE 1: Parallax con imagen de fondo -->
+<div class="viaje_parallax" id="viaje-parallax">
+  <!-- IMAGEN: usa la imagen 4 (sesión real en el salón con infrarrojos)
+       Guardar como: images/viaje-parallax.jpg -->
+  <img
+    src="images/metodologia-banner.png"
+    alt="El Viaje Biológico — Quantum 7D"
+    class="viaje_parallax_img"
+    id="parallaxImg"
+  >
+  <div class="viaje_parallax_overlay"></div>
+  <div class="viaje_parallax_content">
+    <h2 class="viaje_parallax_titulo">
+      Tres ambientes.<br>
+      <em>Un viaje biológico completo.</em>
+    </h2>
+  </div>
+</div>
+
+  <div class="quantum_method_cta">
+    <h3>
+      <br>Quantum 7D.
+      <br>Tres entornos. Un solo propósito.
+    </h3>
+    <a href="https://wa.me/573052876006" class="read_bt_1" style="display:inline-block;padding:12px 40px;border-radius:50px;background:#214436;color:#F5F4ED;font-weight:500;font-size:15px;margin-top:10px;" target="_blank" rel="noopener">
+      Iniciar mi proceso
+    </a>
   </div>
 
 </section>
@@ -400,506 +947,7 @@
   </div>
 </section>
 
-<!-- ================================================================
-SECCIÓN: BOTANIKAL DECK
-================================================================ -->
 
-<section class="botanikal_section" id="botanical">
-  <div class="botanikal_inner">
-
-    <div class="botanikal_imagen_wrap">
-      <img src="images/bd.png" alt="Botanikal Deck — Quantum 7D" class="botanikal_imagen">
-      <span class="botanikal_imagen_badge">Botanikal Deck</span>
-    </div>
-
-    <div class="botanikal_contenido">
-
-      <div class="botanikal_hiperbarica" style="display:none"><!-- EJEMPLO — copiar dentro del .botanikal_contenido -->
-  <span class="botanikal_hiperbarica_titulo">Cámara Hiperbárica Natural</span>
-  <p class="botanikal_hiperbarica_texto">
-    Mientras las ciudades luchan contra el PM2.5, el Oriente Antioqueño —
-    uno de los pocos lugares en Colombia donde se exporta aire al extranjero —
-    ofrece una pureza atmosférica que convierte cada inhalación en un protocolo
-    de desinflamación celular. No necesitamos encerrar a nadie en una cámara.
-    La naturaleza aquí ya es hiperbárica.
-  </p>
-</div>
-
-      <p class="botanikal_eyebrow">Oxigenación Sistémica</p>
-
-      <h2 class="botanikal_titulo">
-        Más allá del movimiento:<br>
-        <span>El Pulmón de la Sintergia</span>
-      </h2>
-
-      <p class="botanikal_intro">
-        No toda actividad física es igual si el aire que respiras está saturado.
-        En nuestro Botanikal Deck, cada inhalación es un protocolo
-        de desinflamación celular.
-      </p>
-
-      <div class="botanikal_pilares">
-
-        <div class="botanikal_pilar">
-          <div class="botanikal_pilar_icon">
-            <i class="fa-solid fa-lungs"></i>
-          </div>
-          <div class="botanikal_pilar_texto">
-            <span class="botanikal_pilar_nombre">Densidad de Oxígeno</span>
-            <p class="botanikal_pilar_desc">
-              A 2.100 msnm, el cuerpo optimiza su eficiencia hematológica.
-              Entrenar aquí mejora la capacidad de transporte de oxígeno
-              de manera natural.
-            </p>
-          </div>
-        </div>
-
-        <div class="botanikal_pilar">
-          <div class="botanikal_pilar_icon">
-            <i class="fa-solid fa-tree"></i>
-          </div>
-          <div class="botanikal_pilar_texto">
-            <span class="botanikal_pilar_nombre">Fitoncidas</span>
-            <p class="botanikal_pilar_desc">
-              La vegetación del deck emite compuestos orgánicos que activan
-              las células NK (Natural Killers), fortaleciendo el sistema
-              inmune con cada sesión al aire libre.
-            </p>
-          </div>
-        </div>
-
-        <div class="botanikal_pilar">
-          <div class="botanikal_pilar_icon">
-            <i class="fa-solid fa-wind"></i>
-          </div>
-          <div class="botanikal_pilar_texto">
-            <span class="botanikal_pilar_nombre">Iones Negativos</span>
-            <p class="botanikal_pilar_desc">
-              El aire de montaña está cargado de iones negativos que reducen
-              el estrés oxidativo, mejoran el estado de ánimo y contrarrestan
-              el impacto de la polución urbana.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-<div class="botanikal_viaje" style="display:none"><!-- EJEMPLO — copiar dentro del .botanikal_contenido -->
-  <div class="botanikal_viaje_paso">
-    <div class="botanikal_viaje_num">1</div>
-    <div class="botanikal_viaje_info">
-      <strong>Preparación Térmica</strong>
-      <span>El salón abre los canales de eliminación y prepara el tejido muscular.</span>
-    </div>
-  </div>
-  <div class="botanikal_viaje_paso">
-    <div class="botanikal_viaje_num">2</div>
-    <div class="botanikal_viaje_info">
-      <strong>Reparación Celular</strong>
-      <span>La tecnología infrarroja penetra profundo para activar la mitocondria.</span>
-    </div>
-  </div>
-  <div class="botanikal_viaje_paso">
-    <div class="botanikal_viaje_num">3</div>
-    <div class="botanikal_viaje_info">
-      <strong>Super-Oxigenación</strong>
-      <span>Botanikal Deck sella el proceso. Oxígeno puro de montaña. Fitoncidas activos.</span>
-    </div>
-  </div>
-</div>
-
-
-      <div class="botanikal_divider"></div>
-
-      <p class="botanikal_cita">
-        "Combinamos la tecnología infrarroja inmersiva con sesiones al aire libre
-        en el Botanikal Deck. La unión entre <strong>tecnología y naturaleza</strong> —
-        el balance perfecto de la Sintergia."
-      </p>
-
-      <a href="https://wa.me/573052876006" class="botanikal_btn" target="_blank" rel="noopener">
-        <i class="fa-brands fa-whatsapp"></i>
-        Reserva tu experiencia
-      </a>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- ================================================================
-SECCIÓN: TRANSPARENCIA TÉCNICA
-================================================================ -->
-
-<section class="tecnica_section" id="tecnica_section">
-  <div class="container">
-
-    <p class="tecnica_eyebrow">Tecnología Certificada</p>
-    <h2 class="tecnica_titulo">Transparencia Técnica</h2>
-    <p class="tecnica_subtitulo">
-      En Quantum 7D la tecnología no es un accesorio — es un agente terapéutico.
-      Nuestro estándar no es el mercado local, sino la regulación internacional
-      de salud humana y ambiental.
-    </p>
-
-    <div class="tecnica_sellos">
-
-      <div class="tecnica_sello">
-        <img src="images/ce.png" alt="Certificación CE — Conformité Européenne">
-        <p class="tecnica_sello_nombre">CE</p>
-        <p class="tecnica_sello_desc">
-          Conformité Européenne — garantía de seguridad humana bajo las directivas
-          más estrictas de la Unión Europea para dispositivos de contacto continuo.
-        </p>
-      </div>
-
-      <div class="tecnica_divisor"></div>
-
-      <div class="tecnica_sello">
-        <img src="images/rosh.png" alt="Certificación RoHS — Sin sustancias tóxicas">
-        <p class="tecnica_sello_nombre">RoHS</p>
-        <p class="tecnica_sello_desc">
-          Libre de plomo, mercurio y cadmio. El aire que respiras en cada sesión
-          es 100% puro — protegiendo tu sistema endocrino en cada visita.
-        </p>
-      </div>
-
-      <div class="tecnica_divisor"></div>
-
-      <div class="tecnica_sello">
-        <img src="images/fcc.png" alt="Certificación FCC — Federal Communications Commission">
-        <p class="tecnica_sello_nombre">FCC</p>
-        <p class="tecnica_sello_desc">
-          Federal Communications Commission — el estímulo infrarrojo es limpio
-          y no genera interferencias en tu entorno bioeléctrico.
-        </p>
-      </div>
-
-    </div>
-
-    <div class="tecnica_declaracion">
-      <p>
-        Nuestros sistemas de optimización infrarroja de piso emiten el estímulo desde la base,
-        generando una <strong>distribución uniforme e inmersiva</strong> que los paneles convencionales
-        no pueden replicar. Contamos con los <strong>Test Reports internacionales</strong> que respaldan
-        cada certificado — el único centro en Colombia con este nivel de trazabilidad técnica
-        en infrarrojo de piso.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ================================================================
-     4. INGENIERÍA TÉRMICA (nueva)
-     ================================================================ -->
-
-<section class="termica_section" id="termica">
-  <div class="termica_inner">
-
-    <!-- Imagen izquierda — cuadrada -->
-    <!-- COLOCA AQUÍ una imagen del salón con infrarrojos encendidos -->
-    <div class="termica_imagen_wrap">
-      <div class="termica_img_placeholder">
-        <!-- <i class="fa-solid fa-fire"></i>
-        <span>Imagen: salón con infrarrojos</span> -->
-        <img src="images/termica-img.jpg" alt="Ingeniería Térmica — Quantum 7D" class="termica_imagen">
-      </div>
-      <!-- Cuando tengas la imagen, reemplaza el placeholder por: -->
-      <!-- <img src="images/termica-img.jpg" alt="Ingeniería Térmica — Quantum 7D" class="termica_imagen"> -->
-    </div>
-
-    <div class="termica_contenido">
-
-      <p class="termica_eyebrow">Ingeniería Biológica</p>
-
-      <h2 class="termica_titulo">
-        El calor no es el enemigo.<br>
-        <span>Es el vehículo.</span>
-      </h2>
-
-      <p class="termica_intro">
-        Un músculo rígido puede generar resistencia al movimiento. El calor, en cambio, es un biocatalizador.
-        En Quantum 7D cada grado está calculado para optimizar tu respuesta biológica
-        al movimiento — no para que sudes más, sino para que tus células reparen más.
-      </p>
-
-      <div class="termica_beneficios">
-
-        <div class="termica_beneficio">
-          <div class="termica_beneficio_icon">
-            <i class="fa-solid fa-dna"></i>
-          </div>
-          <div>
-            <span class="termica_beneficio_nombre">Hormesis Térmica</span>
-            <p class="termica_beneficio_desc">
-              El estrés térmico controlado despierta la resiliencia celular y activa
-              las Proteínas de Choque Térmico (HSP) — las responsables de reparar
-              tus tejidos y proteger tu sistema nervioso.
-            </p>
-          </div>
-        </div>
-
-        <div class="termica_beneficio">
-          <div class="termica_beneficio_icon">
-            <i class="fa-solid fa-heart-pulse"></i>
-          </div>
-          <div>
-            <span class="termica_beneficio_nombre">Eficiencia Cardiovascular</span>
-            <p class="termica_beneficio_desc">
-              El esfuerzo térmico entrena al corazón con mayor precisión, aumentando
-              el volumen plasmático y mejorando el transporte de oxígeno a los músculos.
-            </p>
-          </div>
-        </div>
-
-        <div class="termica_beneficio">
-          <div class="termica_beneficio_icon">
-            <i class="fa-solid fa-droplet"></i>
-          </div>
-          <div>
-            <span class="termica_beneficio_nombre">Plasticidad del Colágeno</span>
-            <p class="termica_beneficio_desc">
-              El calor transforma la viscosidad del tejido conectivo, permitiendo
-              movimientos más profundos y seguros, reduciendo el riesgo de microlesiones.
-            </p>
-          </div>
-        </div>
-
-        <div class="termica_beneficio">
-          <div class="termica_beneficio_icon">
-            <i class="fa-solid fa-bolt"></i>
-          </div>
-          <div>
-            <span class="termica_beneficio_nombre">Optimización Metabólica</span>
-            <p class="termica_beneficio_desc">
-              La temperatura elevada acelera la tasa metabólica basal y favorece
-              la desintoxicación por vasodilatación a nivel linfático.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="termica_modalidades">
-        <div class="termica_modalidad">
-          <span>Movilidad y Yoga</span>
-          <p>Máxima plasticidad tisular y apertura articular</p>
-        </div>
-        <div class="termica_modalidad">
-          <span>Pilates y Fortalecimiento</span>
-          <p>Conexión neuromuscular y oxigenación profunda</p>
-        </div>
-        <div class="termica_modalidad">
-          <span>Respiración Consciente</span>
-          <p>Relajación diafragmática y expansión pulmonar</p>
-        </div>
-        <div class="termica_modalidad">
-          <span>HIIT y Cardio</span>
-          <p>Aceleración metabólica con estrés térmico controlado</p>
-        </div>
-      </div>
-
-      <p class="termica_nota">
-        Los rangos de temperatura son información propietaria de nuestro research.
-        Cada modalidad opera bajo protocolos clínicos definidos por Natalia Marín, MSc. en Neurociencias.
-      </p>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ================================================================
-     5. QUANTUM METHOD — METODOLOGÍA (nueva)
-     Reemplaza completamente la sección .exclusive_section
-     ================================================================ -->
-
-<section class="quantum_method_section" id="quantum-method">
-
-  <div class="quantum_method_header">
-    <p class="quantum_method_eyebrow">Ingeniería Biológica de Alta Precisión</p>
-    <h2 class="quantum_method_titulo">
-      No entrenamos músculos.<br>
-      <span>Reprogramamos sistemas.</span>
-    </h2>
-    <p class="quantum_method_tagline">
-      Bajo la dirección de Natalia Marín, cada protocolo en Quantum 7D está codificado
-      para reprogramar tu sistema nervioso y hormonal en comunidad.
-      No asistes a clases. Te integras a un protocolo de <em>ingeniería biológica</em>.
-    </p>
-  </div>
-
-  <div class="quantum_method_pilares">
-
-    <div class="quantum_pilar">
-      <div class="quantum_pilar_icono">
-        <i class="fa-solid fa-brain"></i>
-      </div>
-      <h3 class="quantum_pilar_titulo">Neuro-Arquitectura del Movimiento</h3>
-      <p class="quantum_pilar_desc">
-        No solo entrenamos músculos. Entrenamos el sistema nervioso central para generar
-        patrones de movimiento que trasciendan las limitaciones de la realidad cotidiana.
-        El entorno es parte activa del protocolo.
-      </p>
-      <p class="quantum_pilar_resultado">Resultado: Claridad, foco y presencia sostenida.</p>
-    </div>
-
-    <div class="quantum_pilar">
-      <div class="quantum_pilar_icono">
-        <i class="fa-solid fa-temperature-high"></i>
-      </div>
-      <h3 class="quantum_pilar_titulo">Hormesis Clínica Controlada</h3>
-      <p class="quantum_pilar_desc">
-        El uso preciso del calor térmico e infrarrojo genera un estrés positivo que
-        optimiza el control hormonal y la regeneración celular. Cada sesión activa
-        los mecanismos de reparación más poderosos de tu biología.
-      </p>
-      <p class="quantum_pilar_resultado">Resultado: Regeneración profunda. Longevidad activa.</p>
-    </div>
-
-    <div class="quantum_pilar">
-      <div class="quantum_pilar_icono">
-        <i class="fa-solid fa-infinity"></i>
-      </div>
-      <h3 class="quantum_pilar_titulo">Sintergia Basada en Evidencia</h3>
-      <p class="quantum_pilar_desc">
-        La unificación de cuerpo, mente y entorno se aborda desde la perspectiva
-        científica. Buscamos una coherencia profunda que genere un Bienestar Exponencial
-        medible en la salud de cada individuo.
-      </p>
-      <p class="quantum_pilar_resultado">Resultado: Bienestar exponencial. Medible. Real.</p>
-    </div>
-
-  </div>
-
-  <!-- IMAGEN ANCHA — horizontal, ratio 16:6 aproximado -->
-  <!-- COLOCA AQUÍ una imagen del grupo en sesión, salon o deck -->
-  <div class="quantum_method_imagen_wrap">
-    <div class="quantum_img_placeholder">
-      <!-- <i class="fa-solid fa-person-running"></i>
-      <span>Imagen: grupo en sesión — salón o Botanikal Deck</span> -->
-      <img src="images/metodologia-banner.png" alt="Quantum Method" class="quantum_method_imagen">
-    </div>
-    <!-- Cuando tengas la imagen, reemplaza por: -->
-    <!-- <img src="images/metodologia-banner.jpg" alt="Quantum Method" class="quantum_method_imagen"> -->
-  </div>
-
-  <div class="quantum_method_cta">
-    <h3>
-      Quantum 7D. Botanikal Deck. <em>The Collective of Mastery.</em><br>
-      Tres entornos. Un solo propósito.
-    </h3>
-    <a href="https://wa.me/573052876006" class="read_bt_1" style="display:inline-block;padding:12px 40px;border-radius:50px;background:#214436;color:#F5F4ED;font-weight:500;font-size:15px;margin-top:10px;" target="_blank" rel="noopener">
-      Iniciar mi proceso
-    </a>
-  </div>
-
-</section>
-
-
-<!-- ================================================================
-     6. THE COLLECTIVE OF MASTERY (nueva)
-     Insertar después de .quantum_method_section
-     ================================================================ -->
-
-<section class="collective_section" id="collective">
-  <div class="collective_inner">
-
-    <!-- Imagen izquierda — cuadrada -->
-    <!-- COLOCA AQUÍ una imagen del equipo o facilitador en sesión -->
-    <div class="collective_imagen_wrap">
-      <div class="collective_img_placeholder">
-        <!-- <i class="fa-solid fa-users"></i>
-        <span>Imagen: equipo / facilitador</span> -->
-        <img src="images/collective-img.jpg" alt="The Collective of Mastery" class="collective_imagen">
-      </div>
-      <!-- Cuando tengas la imagen, reemplaza por: -->
-      <!-- <img src="images/collective-img.jpg" alt="The Collective of Mastery" class="collective_imagen"> -->
-      <span class="collective_imagen_badge">The Collective of Mastery</span>
-    </div>
-
-    <div class="collective_contenido">
-
-      <p class="collective_eyebrow">La Facultad de la Evolución</p>
-
-      <h2 class="collective_titulo">
-        No es quién dicta la sesión.<br>
-        <span>Es la ciencia detrás de ella.</span>
-      </h2>
-
-      <p class="collective_intro">
-        Hemos eliminado la figura del instructor convencional para dar paso
-        a los Health Curators. Un colectivo de expertos locales e internacionales
-        seleccionados por su rigor científico y su capacidad de guiar el cuerpo
-        hacia la Sintergia.
-      </p>
-
-      <div class="collective_valores">
-
-        <div class="collective_valor">
-          <div class="collective_valor_icono">
-            <i class="fa-solid fa-globe"></i>
-          </div>
-          <div>
-            <span class="collective_valor_nombre">Expertise Global</span>
-            <p class="collective_valor_desc">
-              Acceso exclusivo a una red de especialistas en biomecánica, fisiatría
-              y artes del bienestar. Residencias internacionales que traen a Colombia
-              las últimas fronteras del movimiento.
-            </p>
-          </div>
-        </div>
-
-        <div class="collective_valor">
-          <div class="collective_valor_icono">
-            <i class="fa-solid fa-flask"></i>
-          </div>
-          <div>
-            <span class="collective_valor_nombre">Quantum Method</span>
-            <p class="collective_valor_desc">
-              Todo miembro del colectivo opera bajo nuestra metodología propietaria.
-              Un sistema transdisciplinar que integra la fotobiomodulación, la hormesis
-              térmica y la oxigenación de alta montaña. El método es la ciencia
-              que garantiza tu resultado.
-            </p>
-          </div>
-        </div>
-
-        <div class="collective_valor">
-          <div class="collective_valor_icono">
-            <i class="fa-solid fa-certificate"></i>
-          </div>
-          <div>
-            <span class="collective_valor_nombre">Certificación Interna</span>
-            <p class="collective_valor_desc">
-              Cada facilitador está certificado en la aplicación biológica
-              de nuestra tecnología. Tu seguridad y progreso respaldados
-              por evidencia clínica en cada sesión.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-      <p class="collective_cita">
-        "En Quantum 7D, el maestro es el guía.
-        Pero el <strong>Quantum Method es la ciencia que garantiza tu resultado</strong>.
-        Sin importar quién dicte la sesión, el protocolo asegura que cada movimiento
-        tenga un propósito biológico exacto."
-      </p>
-
-      <a href="https://wa.me/573052876006" class="collective_btn" target="_blank" rel="noopener">
-        <i class="fa-brands fa-whatsapp"></i>
-        Conocer el programa
-      </a>
-
-    </div>
-
-  </div>
-</section>
 
 
 <!-- ================================================================
@@ -1000,107 +1048,199 @@ SECCIÓN: TRANSPARENCIA TÉCNICA
 
    
 
-      <!-- choose section start -->
-   <div class="choose_section layout_padding" id="PQRs">
-      <div class="container">
-         <h1 class="choose_taital">Reglamento de Acceso:</h1>
-         <section class="acordeones-container">
+ <!-- ================================================================
+     FIX 3 — REGLAMENTO: diseño premium
+     Reemplaza completamente <div class="choose_section" id="PQRs">
+     ================================================================ -->
 
-  <!-- Acordeón 1 -->
-  <div class="acordeon">
-    <button class="acordeon-header">1. Unificación del Cuerpo (Salud y Seguridad)</button>
-    <div class="acordeon-content">
-      <p><strong>Estas reglas son críticas dada la temperatura constante de 40°C y el uso de terapia infrarroja.</strong></p>
-      <p><strong>1. Evaluación Obligatoria:</strong> La participación en Quantum 7D requiere completar el Cuestionario de Acceso Sintergia antes de la primera sesión. Por seguridad, Sintergia se reserva el derecho de pedir una autorización médica para ciertos casos.</p>
-      <p><strong>2. Exclusiones Médicas:</strong> Por favor, absténgase de usar Quantum 7D si está embarazada, tiene fiebre o una infección activa, o sufre de presión arterial inestable, o afecciones cardíacas graves. Consulte a su médico si toma medicamentos que afecten la termorregulación.</p>
-      <p><strong>3. Cero Alcohol:</strong> Está estrictamente prohibido el consumo de alcohol, estupefacientes o drogas recreativas dentro de las 8 horas previas a su sesión. El calor potencia sus efectos y anula los beneficios de la desintoxicación.</p>
-      <p><strong>4. Hidratación Esencial:</strong> Es obligatorio consumir el Néctar de Activación (bebida de bienvenida) y continuar hidratándose durante la sesión. El agua es clave para su Bienestar Exponencial.</p>
-    </div>
+<section class="reglamento_section" id="PQRs">
+
+  <div class="reglamento_header">
+    <span class="reglamento_eyebrow">Protocolo de Acceso</span>
+    <h2 class="reglamento_titulo">Reglamento</h2>
+    <p class="reglamento_subtitulo">
+      Quantum 7D opera bajo un protocolo de convivencia diseñado para proteger
+      la experiencia de cada usuario y la integridad del espacio.
+    </p>
   </div>
 
-  <!-- Acordeón 2 -->
-  <div class="acordeon">
-    <button class="acordeon-header">2. Unificación de la Mente (Respeto y Consciencia)</button>
-    <div class="acordeon-content">
-      <p><strong>Estas reglas protegen la experiencia inmersiva y de lujo de todos los huéspedes.</strong></p>
-      <p><strong>5. Santuario de Silencio:</strong> Quantum 7D es un espacio de introspección profunda. Solicitamos que mantenga el silencio o utilice los auriculares proporcionados. El uso de teléfonos móviles no está permitido en la cabina para proteger el proceso de Unificación Mental.</p>
-      <p><strong>6. Puntualidad:</strong> Para honrar su tiempo y el de otros huéspedes, solicitamos estricta puntualidad. Las sesiones inician y terminan a la hora programada para mantener la coherencia del flujo de Sintergia.</p>
-      <p><strong>7. Vestimenta Adecuada:</strong> Por higiene y confort, es obligatorio utilizar la ropa de baño o el Ritual Wear proporcionado por Sintergia durante la sesión.</p>
+  <!-- Bloques principales -->
+  <div class="reglamento_grid">
+
+    <div class="reglamento_bloque">
+      <div class="reglamento_bloque_icon">
+        <i class="fa-solid fa-calendar-check"></i>
+      </div>
+      <h3 class="reglamento_bloque_titulo">Reservas y Cupos</h3>
+      <div class="reglamento_bloque_items">
+        <div class="reglamento_bloque_item">
+          <p>Reserva previa obligatoria a través de la plataforma oficial. No se garantiza cupo sin reserva confirmada.</p>
+        </div>
+        <div class="reglamento_bloque_item">
+          <p>Al confirmar tu programación, el cupo se descuenta automáticamente del paquete. <strong>No se admiten cancelaciones posteriores.</strong></p>
+        </div>
+        <div class="reglamento_bloque_item">
+          <p>Cancelación con menos de 4 semanas: cargo del 50%. Con menos de 7 días: cargo del 90%.</p>
+        </div>
+        <div class="reglamento_bloque_item">
+          <p>Cupos y paquetes <strong>no son reembolsables ni transferibles</strong> debido a la alta demanda del servicio.</p>
+        </div>
+        <div class="reglamento_bloque_item">
+          <p>Vigencia máxima de paquetes: 1 mes desde la fecha de adquisición.</p>
+        </div>
+      </div>
+      <div class="reglamento_bloque_linea"></div>
     </div>
+
+    <div class="reglamento_bloque">
+      <div class="reglamento_bloque_icon">
+        <i class="fa-solid fa-clock"></i>
+      </div>
+      <h3 class="reglamento_bloque_titulo">Puntualidad y Estancia</h3>
+      <div class="reglamento_bloque_items">
+        <div class="reglamento_bloque_item">
+          <p><strong>Salón Infrarrojo:</strong> ingreso hasta 5 minutos después del inicio.</p>
+        </div>
+        <div class="reglamento_bloque_item">
+          <p><strong>Espacio Terapéutico:</strong> ingreso hasta 5 minutos después del inicio.</p>
+        </div>
+        <div class="reglamento_bloque_item">
+          <p><strong>Botanikal Deck (aire libre):</strong> ingreso hasta 10 minutos después del inicio.</p>
+        </div>
+        <div class="reglamento_bloque_item">
+          <p>Pasado el tiempo, el cupo podrá ser reasignado y la sesión se contabilizará como consumida.</p>
+        </div>
+        <div class="reglamento_bloque_item">
+          <p>Al finalizar la sesión, el usuario debe retirarse del salón o deck. Puede dirigirse a la zona común o café.</p>
+        </div>
+      </div>
+      <div class="reglamento_bloque_linea"></div>
+    </div>
+
+    <div class="reglamento_bloque">
+      <div class="reglamento_bloque_icon">
+        <i class="fa-solid fa-shield-halved"></i>
+      </div>
+      <h3 class="reglamento_bloque_titulo">Protocolo del Espacio</h3>
+      <div class="reglamento_bloque_items">
+        <div class="reglamento_bloque_item">
+          <p><strong>Digital Detox total:</strong> teléfonos celulares y laptops fuera de las instalaciones durante toda la sesión.</p>
+        </div>
+        <div class="reglamento_bloque_item">
+          <p>Prohibido el consumo de alcohol y tabaco dentro de las instalaciones y zonas del espacio.</p>
+        </div>
+        <div class="reglamento_bloque_item">
+          <p>No se permite el ingreso de mascotas ni acompañantes sin reserva confirmada.</p>
+        </div>
+        <div class="reglamento_bloque_item">
+          <p>Código de conducta: ambiente de silencio y respeto en todo momento. Conversaciones en tono bajo.</p>
+        </div>
+        <div class="reglamento_bloque_item">
+          <p>Prohibido el registro fotográfico o audiovisual sin autorización expresa de la dirección.</p>
+        </div>
+      </div>
+      <div class="reglamento_bloque_linea"></div>
+    </div>
+
   </div>
 
-  <!-- Acordeón 3 -->
-  <div class="acordeon">
-    <button class="acordeon-header">3. Trascendencia y Respeto (La Promesa de Sintergia)</button>
-    <div class="acordeon-content">
-      <p><strong>8. Intención Clara:</strong> Le invitamos a definir su intención (Liberación, Claridad, o Presencia) en el Cuestionario. Permita que esta intención guíe su experiencia de Quantum 7D para una transformación profunda.</p>
-      <p><strong>9. Post-Sesión:</strong> Permita que su cuerpo y mente se reajusten lentamente. Le proporcionaremos un área de transición y le recomendamos una rehidratación y reposo posterior para integrar el Bienestar Exponencial.</p>
+  <!-- Exclusiones médicas — acordeón -->
+  <div class="reglamento_medico" id="regMedico">
+
+    <div class="reglamento_medico_header" onclick="toggleMedico()">
+      <div class="reglamento_medico_icono">
+        <i class="fa-solid fa-heart-pulse"></i>
+      </div>
+      <div class="reglamento_medico_label">
+        <h3>Condiciones de Salud y Exclusiones Médicas</h3>
+        <p>Protocolo de seguridad biológica — expandir para ver el listado completo</p>
+      </div>
+      <i class="fa-solid fa-chevron-down reglamento_medico_arrow"></i>
     </div>
-  </div>
-</section>
 
-<style>
-  .acordeones-container {
-    max-width: 800px;
-    margin: auto;
-    padding: 2rem;
-    font-family: 'Roboto', sans-serif;
-  }
+    <div class="reglamento_medico_body">
+      <div class="reglamento_medico_grid">
 
-  .acordeon {
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #d3b29d; /* Ajustable tono terracota */
-  }
+        <div class="reglamento_medico_cat">
+          <p class="reglamento_medico_cat_titulo">
+            <i class="fa-solid fa-heart"></i>
+            Condiciones Cardiovasculares
+          </p>
+          <ul class="reglamento_medico_lista">
+            <li>Insuficiencia Cardíaca Congestiva</li>
+            <li>Angina de Pecho Inestable</li>
+            <li>Hipertensión Arterial no controlada</li>
+            <li>Portadores de Marcapasos o Desfibriladores</li>
+          </ul>
+        </div>
 
-  .acordeon-header {
-    width: 100%;
-    text-align: left;
-    padding: 1rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
+        <div class="reglamento_medico_cat">
+          <p class="reglamento_medico_cat_titulo">
+            <i class="fa-solid fa-brain"></i>
+            Neuropatías y Sensibilidad
+          </p>
+          <ul class="reglamento_medico_lista">
+            <li>Neuropatía Diabética Avanzada</li>
+            <li>Esclerosis Múltiple (Fenómeno de Uhthoff)</li>
+            <li>Siringomielia o lesiones medulares</li>
+          </ul>
+        </div>
 
-  .acordeon-header:hover {
-    color: #c07a58; /* tono cálido para hover */
-  }
+        <div class="reglamento_medico_cat">
+          <p class="reglamento_medico_cat_titulo">
+            <i class="fa-solid fa-droplet"></i>
+            Condiciones Vasculares
+          </p>
+          <ul class="reglamento_medico_lista">
+            <li>Trombosis Venosa Profunda activa o reciente</li>
+            <li>Hemofilia o trastornos de la coagulación</li>
+            <li>Insuficiencia Venosa Crónica Severa</li>
+          </ul>
+        </div>
 
-  .acordeon-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    padding: 0 1rem;
-  }
-
-  .acordeon-content p {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-  }
-
-  .acordeon.active .acordeon-content {
-    max-height: 600px;
-    padding: 1rem;
-  }
-</style>
-
-<script>
-  const acordeones = document.querySelectorAll('.acordeon');
-
-  acordeones.forEach(acordeon => {
-    acordeon.querySelector('.acordeon-header').addEventListener('click', () => {
-      acordeon.classList.toggle('active');
-    });
-  });
-</script>
-
-         <!-- <div class="read_bt_1"><a href="https://wa.me/573052876006"><img src="images/ws-icon.png">Escribenos</a></div> -->
+        <div class="reglamento_medico_cat">
+          <p class="reglamento_medico_cat_titulo">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            Otras Restricciones
+          </p>
+          <ul class="reglamento_medico_lista">
+            <li>Embarazo confirmado o en sospecha</li>
+            <li>Implantes quirúrgicos o prótesis metálicas</li>
+            <li>Insuficiencia Renal Crónica</li>
+            <li>Cáncer o tumores malignos activos</li>
+            <li>Infecciones sistémicas o fiebre activa</li>
+          </ul>
+        </div>
 
       </div>
-   </div>
-   <!-- choose section end -->
+    </div>
+
+  </div>
+
+  <!-- Nota de aceptación -->
+  <div class="reglamento_aceptacion">
+    <div class="reglamento_aceptacion_icon">
+      <i class="fa-solid fa-file-signature"></i>
+    </div>
+    <div class="reglamento_aceptacion_texto">
+      <p>
+        Al completar el proceso de reserva, el usuario declara haber leído y aceptado
+        íntegramente este reglamento, haber completado su ficha de antecedentes médicos
+        de manera veraz, y conocer el <strong>Manual de Recomendaciones de Quantum 7D</strong>
+        disponible en <strong>www.quantum7d.com</strong>. La participación implica la aceptación
+        total de los Términos y Condiciones del servicio.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<script>
+function toggleMedico() {
+  var el = document.getElementById('regMedico');
+  if (el) el.classList.toggle('open');
+}
+</script>
    
    <!-- footer section start -->
 <!--    <div class="footer_section layout_padding">
