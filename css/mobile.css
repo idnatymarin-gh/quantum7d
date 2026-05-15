@@ -1,0 +1,826 @@
+/* ================================================================
+   QUANTUM 7D — RESPONSIVE MÓVIL
+   Guardar como: css/mobile.css
+   Agregar en index.html justo antes de </head>:
+   <link rel="stylesheet" href="css/mobile.css">
+   ================================================================ */
+
+/* ================================================================
+   BASE MÓVIL — ajustes globales
+   ================================================================ */
+
+@media (max-width: 768px) {
+
+  body {
+    text-align: left;
+    overflow-x: hidden;
+  }
+
+  p {
+    margin: 12px 0;
+  }
+
+  /* ================================================================
+     BANNER
+     ================================================================ */
+
+  .banner_title {
+    font-size: 26px !important;
+    font-weight: 300;
+    padding: 0 20px;
+    line-height: 1.3;
+  }
+
+  .banner_logo {
+    width: 260px !important;
+    margin-bottom: 16px;
+  }
+
+  .banner_content {
+    padding: 0 20px;
+  }
+
+  /* ================================================================
+     MENÚ MÓVIL
+     ================================================================ */
+
+  .top_nav {
+    padding: 0 20px !important;
+  }
+
+  .top_nav_mobile ul li a {
+    padding: 16px 30px !important;
+    font-size: 14px !important;
+    letter-spacing: 1.5px;
+  }
+
+  /* ================================================================
+     MÉTODO
+     ================================================================ */
+
+  .metodo_section {
+    padding: 0 !important;
+  }
+
+  .metodo_header {
+    padding: 60px 20px 40px !important;
+  }
+
+  .metodo_titulo {
+    font-size: 48px !important;
+    letter-spacing: -1px;
+  }
+
+  .metodo_intro {
+    font-size: 15px !important;
+  }
+
+  .metodo_pilares {
+    grid-template-columns: 1fr !important;
+    padding: 0 !important;
+  }
+
+  .metodo_pilar {
+    padding: 28px 20px !important;
+    border-right: none !important;
+    border-bottom: 1px solid #e8e3dc;
+  }
+
+  .metodo_pilar:last-child {
+    border-bottom: none;
+  }
+
+  .metodo_cita {
+    padding: 40px 20px !important;
+  }
+
+  .metodo_cita p {
+    font-size: 15px !important;
+    margin: 0 !important;
+  }
+
+  .metodo_img_wrap img {
+    height: 240px !important;
+  }
+
+  /* ================================================================
+     VIAJE BIOLÓGICO — PARALLAX
+     ================================================================ */
+
+  .viaje_parallax {
+    height: 50vh !important;
+    min-height: 320px !important;
+  }
+
+  .viaje_parallax_titulo {
+    font-size: 28px !important;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+  }
+
+  .viaje_parallax_content {
+    padding: 0 24px !important;
+  }
+
+  .viaje_biologico {
+    padding: 60px 20px !important;
+  }
+
+  .viaje_biologico_header {
+    margin-bottom: 48px !important;
+  }
+
+  .viaje_biologico_subtitulo {
+    font-size: 14px !important;
+    margin: 0 !important;
+  }
+
+  .viaje_pasos {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+
+  .viaje_pasos::before {
+    display: none !important;
+  }
+
+  .viaje_paso {
+    max-width: 100% !important;
+    padding: 0 !important;
+    text-align: center;
+  }
+
+  .viaje_paso_num {
+    width: 76px !important;
+    height: 76px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .viaje_paso_num i {
+    font-size: 20px !important;
+  }
+
+  .viaje_paso_desc {
+    max-width: 100% !important;
+    font-size: 14px !important;
+  }
+
+  /* ================================================================
+     SECCIÓN SCROLL-DRIVEN (viaje_wrapper)
+     ================================================================ */
+
+  .viaje_wrapper {
+    height: auto !important;
+  }
+
+  .viaje_sticky {
+    position: relative !important;
+    height: auto !important;
+  }
+
+  .viaje_bg_slide {
+    display: none !important;
+  }
+
+  .viaje_bg_slide.active {
+    display: block !important;
+    position: relative !important;
+    height: 260px !important;
+  }
+
+  .viaje_bg_slide.active img {
+    height: 260px !important;
+    transform: none !important;
+  }
+
+  .viaje_slide_content {
+    position: relative !important;
+    opacity: 1 !important;
+    transform: none !important;
+    padding: 36px 20px !important;
+    max-width: 100% !important;
+    background: var(--negro-calido, #110d08);
+    display: none !important;
+  }
+
+  .viaje_slide_content.active {
+    display: flex !important;
+  }
+
+  .viaje_titulo_grande {
+    font-size: 32px !important;
+    letter-spacing: -0.5px;
+  }
+
+  .viaje_progress_bar {
+    display: none !important;
+  }
+
+  .viaje_fase_num {
+    display: none !important;
+  }
+
+  .viaje_track {
+    display: none !important;
+  }
+
+  /* ================================================================
+     PATRÓN IMAGEN PROTAGONICA — propuesta_section
+     (Ingeniería Térmica, Infrarrojo, Cámara Hiperbárica)
+     ================================================================ */
+
+  .propuesta_inner.img-izq,
+  .propuesta_inner.img-der {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 280px auto !important;
+    min-height: auto !important;
+  }
+
+  .propuesta_inner.img-der .propuesta_imagen_wrap {
+    order: -1 !important;
+  }
+
+  .propuesta_imagen_wrap {
+    height: 280px !important;
+  }
+
+  .propuesta_contenido {
+    padding: 40px 20px !important;
+  }
+
+  .propuesta_titulo {
+    font-size: 26px !important;
+    line-height: 1.2;
+  }
+
+  .propuesta_intro {
+    margin: 0 0 24px !important;
+    font-size: 13px !important;
+  }
+
+  .propuesta_lista {
+    gap: 14px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .propuesta_imagen_badge {
+    bottom: 14px !important;
+    left: 14px !important;
+    font-size: 9px !important;
+    padding: 6px 12px !important;
+  }
+
+  .propuesta_btn {
+    margin-top: 20px !important;
+    padding: 12px 28px !important;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ================================================================
+     SELLOS CE / RoHS / FCC
+     ================================================================ */
+
+  .sellos_section {
+    padding: 60px 20px !important;
+  }
+
+  .sellos_titulo {
+    font-size: 28px !important;
+  }
+
+  .sellos_subtitulo {
+    font-size: 14px !important;
+    margin: 0 auto 48px !important;
+  }
+
+  .sellos_grid {
+    grid-template-columns: 1fr !important;
+    max-width: 100% !important;
+  }
+
+  .sellos_item {
+    padding: 36px 20px !important;
+    border-bottom: 1px solid rgba(206,142,0,0.1);
+  }
+
+  .sellos_item_img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .sellos_item_nombre {
+    font-size: 16px !important;
+  }
+
+  .sellos_declaracion {
+    padding: 24px 20px !important;
+    margin: 0 !important;
+  }
+
+  /* ================================================================
+     THE COLLECTIVE
+     ================================================================ */
+
+  .collective_inner {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 300px auto !important;
+    min-height: auto !important;
+  }
+
+  .collective_imagen_wrap {
+    height: 300px !important;
+  }
+
+  .collective_imagen_wrap img {
+    height: 300px !important;
+  }
+
+  .collective_imagen_badge {
+    bottom: 14px !important;
+    left: 14px !important;
+    font-size: 9px !important;
+    padding: 6px 12px !important;
+  }
+
+  .collective_contenido {
+    padding: 40px 20px !important;
+  }
+
+  .collective_titulo {
+    font-size: 26px !important;
+  }
+
+  .collective_btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ================================================================
+     METODOLOGÍA / QUANTUM METHOD
+     ================================================================ */
+
+  .quantum_method_section {
+    padding: 60px 0 !important;
+  }
+
+  .quantum_method_header {
+    padding: 0 20px !important;
+    margin-bottom: 48px !important;
+  }
+
+  .quantum_method_titulo {
+    font-size: 28px !important;
+    line-height: 1.2;
+  }
+
+  .quantum_method_tagline {
+    font-size: 14px !important;
+  }
+
+  .quantum_method_pilares {
+    grid-template-columns: 1fr !important;
+    padding: 0 20px !important;
+    margin-bottom: 48px !important;
+  }
+
+  .quantum_pilar {
+    padding: 32px 20px !important;
+    border-bottom: 1px solid #e8e3dc;
+    transform: none !important;
+  }
+
+  .quantum_pilar:hover {
+    transform: none !important;
+  }
+
+  .quantum_method_imagen {
+    height: 220px !important;
+  }
+
+  .quantum_img_placeholder {
+    height: 220px !important;
+  }
+
+  .quantum_method_imagen_wrap {
+    padding: 0 !important;
+    margin-bottom: 40px !important;
+  }
+
+  .quantum_method_cta {
+    padding: 0 20px !important;
+  }
+
+  .quantum_method_cta h3 {
+    font-size: 20px !important;
+  }
+
+  /* ================================================================
+     UBICACIÓN PREMIUM
+     ================================================================ */
+
+  .ubicacion_section {
+    padding: 60px 0 !important;
+  }
+
+  .ubicacion_titulo {
+    font-size: 26px !important;
+    padding: 0 20px;
+  }
+
+  .ubicacion_subtitulo {
+    margin: 0 auto 40px !important;
+    padding: 0 20px;
+    font-size: 14px !important;
+  }
+
+  .ubicacion_grid {
+    grid-template-columns: 1fr !important;
+    margin: 0 0 40px !important;
+  }
+
+  .ubicacion_item {
+    padding: 28px 20px !important;
+    border-bottom: 1px solid #ece8e0;
+    border-right: none;
+  }
+
+  .ubicacion_cta {
+    padding: 28px 20px !important;
+    margin: 0 !important;
+    border-radius: 0;
+  }
+
+  .ubicacion_cta_btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ================================================================
+     SINTERGIA GENESIS — PAQUETES
+     ================================================================ */
+
+  .paquetes_section {
+    padding: 60px 0 !important;
+  }
+
+  .paquetes_header {
+    padding: 0 20px !important;
+    margin-bottom: 48px !important;
+  }
+
+  .paquetes_titulo {
+    font-size: 28px !important;
+  }
+
+  .paquetes_subtitulo {
+    font-size: 14px !important;
+  }
+
+  .paquetes_grid {
+    grid-template-columns: 1fr !important;
+    padding: 0 20px !important;
+    gap: 16px !important;
+  }
+
+  .paquete_card {
+    padding: 32px 24px !important;
+    border-radius: 0;
+  }
+
+  .paquete_card.destacado {
+    transform: none !important;
+    margin: 4px 0;
+  }
+
+  .paquete_card.destacado:hover {
+    transform: translateY(-4px) !important;
+  }
+
+  .paquetes_nota {
+    padding: 24px 20px !important;
+    margin: 0 20px !important;
+  }
+
+  /* ================================================================
+     REGLAMENTO
+     ================================================================ */
+
+  .reglamento_section {
+    padding: 60px 20px !important;
+  }
+
+  .reglamento_header {
+    margin-bottom: 48px !important;
+  }
+
+  .reglamento_titulo {
+    font-size: 28px !important;
+  }
+
+  .reglamento_subtitulo {
+    font-size: 14px !important;
+  }
+
+  .reglamento_grid {
+    grid-template-columns: 1fr !important;
+    margin-bottom: 0 !important;
+  }
+
+  .reglamento_bloque {
+    padding: 28px 20px !important;
+    border-bottom: 1px solid #e8e3dc;
+    border-right: none;
+    margin-bottom: 0;
+  }
+
+  .reglamento_bloque:last-child {
+    margin-bottom: 32px;
+  }
+
+  .reglamento_medico {
+    margin: 0 0 32px !important;
+  }
+
+  .reglamento_medico_header {
+    padding: 20px !important;
+    gap: 12px;
+  }
+
+  .reglamento_medico_label h3 {
+    font-size: 12px !important;
+  }
+
+  .reglamento_medico_label p {
+    font-size: 12px !important;
+  }
+
+  .reglamento_medico_grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .reglamento_medico_cat {
+    padding: 20px !important;
+    border-right: none !important;
+  }
+
+  .reglamento_aceptacion {
+    padding: 24px 20px !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    margin: 0 !important;
+  }
+
+  .reglamento_aceptacion_texto p {
+    font-size: 13px !important;
+  }
+
+  /* ================================================================
+     CUENTA REGRESIVA
+     ================================================================ */
+
+  .countdown_section {
+    padding: 60px 20px !important;
+    min-height: auto !important;
+  }
+
+  .countdown_titulo {
+    font-size: 32px !important;
+    line-height: 1.2;
+  }
+
+  .countdown_subtitulo {
+    font-size: 12px !important;
+    margin-bottom: 40px !important;
+    letter-spacing: 1px;
+  }
+
+  .countdown_reloj {
+    gap: 6px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .countdown_numero {
+    font-size: 40px !important;
+    min-width: 68px !important;
+    padding: 10px !important;
+  }
+
+  .countdown_sep {
+    font-size: 28px !important;
+    margin-top: -10px !important;
+  }
+
+  .countdown_cupos {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 24px 20px !important;
+    gap: 12px !important;
+  }
+
+  .countdown_cupos_texto {
+    text-align: center !important;
+  }
+
+  .countdown_btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+    padding: 16px 28px !important;
+    font-size: 14px !important;
+  }
+
+  .countdown_nota {
+    font-size: 11px !important;
+    letter-spacing: 0.5px;
+  }
+
+  /* ================================================================
+     CONTACTO
+     ================================================================ */
+
+  .contact_section {
+    padding: 60px 0 !important;
+  }
+
+  .contact_grid {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  .contact_map {
+    display: none !important;
+  }
+
+  .contact_info {
+    padding: 48px 20px !important;
+  }
+
+  .contact_info h2 {
+    font-size: 36px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .whatsapp_btn {
+    width: 100% !important;
+    font-size: 15px !important;
+    padding: 16px 28px !important;
+  }
+
+  .contact_socials {
+    gap: 16px !important;
+    margin-top: 28px !important;
+  }
+
+  .contact_socials a {
+    width: 52px !important;
+    height: 52px !important;
+    font-size: 22px !important;
+  }
+
+  /* ================================================================
+     COPYRIGHT
+     ================================================================ */
+
+  .copyright_section img {
+    width: 35% !important;
+  }
+
+  .copyright_text {
+    font-size: 13px !important;
+    padding: 10px 0;
+  }
+
+}
+
+/* ================================================================
+   TABLET — ajustes específicos 768px a 1024px
+   ================================================================ */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .banner_title {
+    font-size: 38px !important;
+  }
+
+  .banner_logo {
+    width: 340px !important;
+  }
+
+  .metodo_pilares {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .metodo_pilar:nth-child(3) {
+    border-right: none;
+  }
+
+  .metodo_pilar:nth-child(n+4) {
+    border-top: 1px solid #e8e3dc;
+  }
+
+  .propuesta_inner.img-izq,
+  .propuesta_inner.img-der {
+    grid-template-columns: 50% 50% !important;
+    min-height: 480px !important;
+  }
+
+  .propuesta_contenido {
+    padding: 40px 32px !important;
+  }
+
+  .sellos_grid {
+    max-width: 100% !important;
+  }
+
+  .collective_inner {
+    grid-template-columns: 50% 50% !important;
+    min-height: 500px !important;
+  }
+
+  .collective_contenido {
+    padding: 40px 32px !important;
+  }
+
+  .quantum_method_pilares {
+    grid-template-columns: repeat(3, 1fr) !important;
+    padding: 0 20px !important;
+  }
+
+  .ubicacion_grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .paquetes_grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    padding: 0 20px !important;
+    gap: 20px !important;
+  }
+
+  .paquete_card.destacado {
+    transform: none !important;
+  }
+
+  .reglamento_grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact_grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact_map {
+    display: none !important;
+  }
+
+  .contact_info {
+    padding: 48px 40px !important;
+  }
+
+}
+
+/* ================================================================
+   MÓVIL PEQUEÑO — 375px y menos
+   ================================================================ */
+
+@media (max-width: 375px) {
+
+  .banner_title {
+    font-size: 22px !important;
+  }
+
+  .banner_logo {
+    width: 220px !important;
+  }
+
+  .metodo_titulo {
+    font-size: 38px !important;
+  }
+
+  .viaje_parallax_titulo {
+    font-size: 24px !important;
+  }
+
+  .propuesta_titulo {
+    font-size: 22px !important;
+  }
+
+  .sellos_item_img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .countdown_numero {
+    font-size: 34px !important;
+    min-width: 58px !important;
+  }
+
+  .paquetes_titulo {
+    font-size: 24px !important;
+  }
+
+  .reglamento_titulo {
+    font-size: 24px !important;
+  }
+
+}
